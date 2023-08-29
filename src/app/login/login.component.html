@@ -1,0 +1,41 @@
+<div class="contenedor" >
+    <div class="contenedor__login">
+        <form *ngIf="notcreatenewuser; else newuser">
+          <h2 style="color: black;">Labortorio de Futuros-Nodo</h2>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required>
+              <div id="emailHelp" class="form-text" style="color: black;">{{observacion}}</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required>
+            </div>
+            <button  type="submit" (click)="changepage($event)" class="btn btn-primary">Ingresar</button>
+            <br>
+            <br>
+            <button  (click)="createnew()" class="btn btn-primary">Crear usuario</button>
+        </form>    
+        <ng-template #newuser>
+          <form>
+            <h2 style="color: black;">
+              Crear Usuario
+            </h2>
+            <div class="mb-3">
+              <label for="exampleInputName1" class="form-label">Ingerese su nombre</label>
+              <input type="text" class="form-control" id="exampleInputName1" [(ngModel)]="Newname" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Ingrese su correo electrónico</label>
+              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="Newemail" [ngModelOptions]="{standalone: true}" >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Ingerese su nueva contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="Newpassword" [ngModelOptions]="{standalone: true}">
+            </div>
+            <button  type="submit" (click)="addnewuser()" class="btn btn-primary">Crear</button>
+          </form>
+        </ng-template>
+    </div>  
+</div> 
+   

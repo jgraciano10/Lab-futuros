@@ -1,0 +1,154 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12 row" >
+            <div class="col-xl-12" style="border: 2px solid yellow;">
+                <h2>Lunes</h2>
+                <div class="col-xl-12 reservasx2">
+                    <div class="contenedoreinternosreservado" *ngIf="reservadoLunes1espacio; else sinreservar">
+                        <h2>Equipo 1</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Reservado por {{usuariosservice.nameOnScreen}} para un evento importante</p>
+                        <button class="btn btn-primary">Promocionar</button>
+                    </div>
+                    <ng-template #sinreservar>
+                        <div class="contenedoreinternos">
+                            <h2>Equipo 1</h2>
+                            <p>Capacidad: 3 personas</p>
+                            <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                            <button class="btn btn-primary" (click)="primerEspacioLunes()">Reservar</button>
+                        </div>
+                    </ng-template>
+                    
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 2</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 reservasx1">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 3</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+
+                    </div>
+                </div>
+                
+            </div>
+                
+        </div>
+        <div class="col-xl-12 row" >
+            <div class="col-xl-12" style="border: 2px solid yellow;">
+                <h2>Martes</h2>
+                <div class="col-xl-12 reservasx2">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 1</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 3</h2>
+                        <p>Capacidad: 2 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 reservasx1">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 3</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-12 row">
+            <div class="col-xl-12" style="border: 2px solid yellow;">
+                <h2>Miercoles</h2>
+                <div class="col-xl-12 reservasx2">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 1</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 2</h2>
+                        <p>Capacidad: 2 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 reservasx1">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 3</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+        <div class="col-xl-12 row">
+            <div class="col-xl-12" style="border: 2px solid yellow;">
+                <h2>Jueves</h2>
+                <div class="col-xl-12 reservasx2">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 1</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 2</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 reservasx1">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 3</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                <div>
+            </div> 
+        </div>
+        <div class="col-xl-12 row" >
+            <div class="col-xl-12" style="border: 2px solid yellow;">
+                <h2>Viernes</h2>
+                <div class="col-xl-12 reservasx2">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 1</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 2</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+                <div class="col-xl-12 reservasx1">
+                    <div class="contenedoreinternos">
+                        <h2>Equipo 3</h2>
+                        <p>Capacidad: 3 personas</p>
+                        <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
+                        <button class="btn btn-primary">Reservar</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+      </div>
+</div>
