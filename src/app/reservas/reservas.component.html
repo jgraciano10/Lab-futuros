@@ -4,7 +4,7 @@
             <div class="col-xl-12" style="border: 2px solid yellow;">
                 <h2>Lunes</h2>
                 <div class="col-xl-12 reservasx2">
-                    <div class="contenedoreinternosreservado" *ngIf="reservadoLunes1espacio; else sinreservar">
+                    <div class="contenedoreinternosreservado" *ngIf="reservado.reservadoLunes1espacio;else sinreservar">
                         <h2>Equipo 1</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Reservado por {{usuariosservice.nameOnScreen}} para un evento importante</p>

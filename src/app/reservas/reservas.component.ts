@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UsuariosService } from '../usuarios.service';
+import { ReservasService } from '../reservas.service';
 
 @Component({
   selector: 'app-reservas',
@@ -7,16 +8,16 @@ import { UsuariosService } from '../usuarios.service';
   styleUrls: ['./reservas.component.css']
 })
 export class ReservasComponent {
-  constructor(public usuariosservice: UsuariosService){}
+  constructor(public usuariosservice: UsuariosService,
+             public reservado:ReservasService){
+              
+             }
   /*Funciones para reservar el dia luens*/ 
-  reservadoLunes1espacio:boolean=false;
-  reservadoLunes2espacio:boolean=false;
-  reservadoLunes3espacio:boolean=false;
-
   primerEspacioLunes(){
-    this.reservadoLunes1espacio = true;
+    this.reservado.reservadoLunes1espacio = true
 
   }
+  
 
   
 

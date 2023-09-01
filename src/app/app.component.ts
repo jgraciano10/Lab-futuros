@@ -18,6 +18,7 @@ export class AppComponent {
   activar_boton: boolean = false;
   tooltip_variable: string= "";
   
+  // esta funcion esconde y despliega el menu princial
   desactivar(){
     if(this.activar_boton){
       this.activar_boton= false;
@@ -30,6 +31,8 @@ export class AppComponent {
 
 
   }
+
+  // esta funcion muestra el tooltip cuando el menu no esta desplegado y lo esconde cuando esta desplegado
   tooltip_name(variable: string){
     if(this.activar_boton===false){
       this.tooltip_variable = variable;
