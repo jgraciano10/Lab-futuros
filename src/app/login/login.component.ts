@@ -20,10 +20,7 @@ export class LoginComponent{
   /*Funcion para mirar si el usuario existe y al mismo tiempo acceder en caso de que exista*/     
   changepage(event: Event){
     event.preventDefault();
-    
-    console.log(this.email)
-    console.log(this.password)
-    console.log(this.usuarioservice.usuario)
+  
     this.usuarioservice.usuario.forEach(element => {
       if(element.email===this.email&&element.password===this.password){
         this.loginservice.proceed();

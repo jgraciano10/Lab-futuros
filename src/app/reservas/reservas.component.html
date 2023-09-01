@@ -8,7 +8,7 @@
                         <h2>Equipo 1</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Reservado por {{usuariosservice.nameOnScreen}} para un evento importante</p>
-                        <button class="btn btn-primary">Promocionar</button>
+                        <button class="btn btn-primary" (click)="promocionar('Equipo 1', 'Lunes')" >Promocionar</button>
                     </div>
                     <ng-template #sinreservar>
                         <div class="contenedoreinternos">
