@@ -9,7 +9,7 @@ import { persona } from '../persona.model';
 })
 export class LoginComponent{
   
-  observacion:string="Nunca compartiremos su correo electrónico con nadie más."
+  observacion:string="Para saber acerca de nuestra politica de tratamiento de datos haga click en "
   email: string="";
   password: string="";
   usuarios:persona[] =[];

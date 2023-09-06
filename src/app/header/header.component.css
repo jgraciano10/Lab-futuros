@@ -1,0 +1,9 @@
+.header{
+    background: linear-gradient(to right, #000814, #191970);
+
+}
+.header__container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -1,78 +1,54 @@
 <div class="container-fluid text-center" >
   <div class="row" *ngIf="loginservice.procesador; else login">
-    <header class="col-xl-12 header">
-      <div class="col-xl-12 header__container">
-        <div>
-          <p>Nodo</p>
-        </div>
-        <div>
-          <h2>Hola {{usuarioservice.nameOnScreen}}</h2>
-        </div>
-      </div>
-      
-    </header>
+    <app-header></app-header>
+    
     <div class="firstdiv" [ngClass]="{'col-xl-1': (activar_boton===false), 'col-xl-2': activar_boton===true}" >
       <div class="firstdiv__menu">
         <i class="bi bi-list" (click)="desactivar()" [ngClass]="{'firstdiv__boton--menuopen':activar_boton===false, 'firstdiv__boton--menuclose':activar_boton===true}"></i>
         <p class="menu_cerrar" (click)="desactivar()" [ngClass]="{'firstdiv__boton--menuopen':activar_boton===true, 'firstdiv__boton--menuclose':activar_boton===false}">X</p>
       </div>
-
+  
       <nav class="firstdiv__barnav">
         <ul class="barnav__ul">
-
+  
           <li class="list-group-item ul__li" >
             <a [ngClass]="{'li__a--menuopen':activar_boton===false, 'li__a--menuclose':activar_boton===true}" routerLink="/home" routerLinkActive="active" ngbTooltip={{tooltip_variable}} placement="bottom" (mouseover)="tooltip_name('Home')">
               <i class="bi bi-house "><span [ngClass]="{'i__span': activar_boton===false}"> Home</span></i>
              </a>
           </li>
-
+  
           <li class="list-group-item ul__li" >
             <a [ngClass]="{'li__a--menuopen':activar_boton===false, 'btn btn-secondary':activar_boton===false ,'li__a--menuclose':activar_boton===true}" routerLink="/reservas" routerLinkActive="active"  ngbTooltip={{tooltip_variable}} placement="bottom" (mouseover)="tooltip_name('Reservas')">
               <i class="bi bi-calendar-check"  ><span [ngClass]="{'i__span': activar_boton===false}"> Reservas </span></i> 
             </a>
           </li>
-
+  
           <li class="list-group-item ul__li">
             <a [ngClass]="{'li__a--menuopen':activar_boton===false, 'li__a--menuclose':activar_boton===true}" routerLink="/eventos" routerLinkActive="active" ngbTooltip={{tooltip_variable}} placement="bottom" (mouseover)="tooltip_name('Eventos')">
               <i class="bi bi-calendar3-event-fill "><span [ngClass]="{'i__span': activar_boton===false}"> Eventos </span></i> 
             </a>
           </li>
-
+  
           <li class="list-group-item ul__li">
             <a [ngClass]="{'li__a--menuopen':activar_boton===false, 'li__a--menuclose':activar_boton===true}" routerLink="/about-us" routerLinkActive="active" ngbTooltip={{tooltip_variable}} placement="bottom" (mouseover)="tooltip_name('Acerca de')">
               <i class="bi bi-file-earmark-code "><span [ngClass]="{'i__span': activar_boton===false}"> Acerca de</span></i> 
             </a>
           </li>
-
+  
           <li class="list-group-item ul__li">
             <a [ngClass]="{'li__a--menuopen':activar_boton===false, 'li__a--menuclose':activar_boton===true}" routerLink="/feedback" routerLinkActive="active" ngbTooltip={{tooltip_variable}} placement="bottom" (mouseover)="tooltip_name('Feedback')">
               <i class="bi bi-box2-heart-fill "><span [ngClass]="{'i__span': activar_boton===false}">Feedback</span></i>
             </a>
           </li>
-
+  
         </ul>
       </nav>
     </div>
-    <div  [ngClass]="{'col-xl-11': (activar_boton===false), 'col-xl-10': activar_boton===true}">
-      <router-outlet></router-outlet>
+    <div  [ngClass]="{'col-xl-10': (activar_boton===false), 'col-xl-9': activar_boton===true}">
+       <router-outlet></router-outlet>
     </div>
 
-    <footer class="col-xl-11 footer">
-      <div class="row">
-        <div class="col-xl-9 footer__contenedotlista" >
-          <ul class="footer__ul">
-            <li class="ul__li"><a class="li__a" href="https://www.eafit.edu.co/nodo" target="_blank"> Nodo Eafit</a></li>
-            <li class="ul__li"><a class="li__a" href="https://www.eafit.edu.co/nodo/Paginas/frontend.aspx" target="_blank"> Nodo Frontend</a></li>
-            <li class="ul__li"><a class="li__a" href="https://www.eafit.edu.co/nodo/Paginas/backend.aspx" target="_blank"> Nodo Backend</a></li>
-          </ul>  
-        
-        </div>
-        <div class="col-xl-3 footer__whatsapcontenedor">
-          <a href="https://www.instagram.com/nodo.eafit/?igshid=NzAzN2Q1NTE%3D" target="_blank"><i class="bi bi-instagram whatsapcontenedor__instagram" ></i></a>
-          <a href="https://api.whatsapp.com/send?phone=573112099519&text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20los%20cursos%20de%20Nodo%20EAFIT" target="_blank"><i class="bi bi-whatsapp whatsapcontenedor__whatsapp" id="whatsaap"></i></a>
-        </div>
-      </div>  
-    </footer>
+    <app-footer></app-footer>
 
   </div>
 </div>  

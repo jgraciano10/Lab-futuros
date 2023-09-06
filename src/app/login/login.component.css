@@ -22,3 +22,11 @@
         padding: 1rem;
     }
 }
+.div-datos-personales{
+    color: black;
+}
+
+.div-datos-personales__politica{
+    color:darkblue;
+    text-decoration: none;
+}

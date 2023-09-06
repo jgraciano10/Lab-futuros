@@ -1,0 +1,55 @@
+.footer__ul{
+    margin-top: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid #e9edc9;
+    border-bottom: 2px solid #e9edc9;
+    padding: 0.2rem;
+    list-style-type: none;
+    
+}
+@media  (max-width:700px){
+    .footer__ul{
+        width: 90%;
+    }
+    
+}
+
+.ul__li{
+    text-align: center;
+    text-decoration: none;
+}
+
+.li__a{
+    text-decoration: none;
+    color:antiquewhite;
+    
+}
+
+.li__a:hover{
+    background-color: darkgray;
+    color: #000814;
+}
+
+.footer__whatsapcontenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+.whatsapcontenedor__instagram{
+    font-size: 1.3rem;
+    color: blanchedalmond;
+    background-color: crimson;
+    padding: 6px;
+    border-radius: 9rem;
+}
+
+.whatsapcontenedor__whatsapp{
+    font-size: 1.3rem;
+    color: blanchedalmond;
+    background-color: green;
+    padding: 6px;
+    border-radius: 100px;
+}
