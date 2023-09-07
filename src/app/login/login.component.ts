@@ -15,13 +15,18 @@ export class LoginComponent{
   usuarios:persona[] =[];
   numero:number=0;
   constructor(public loginservice: LoginService,
-              public usuarioservice:UsuariosService){}
+              public usuarioservice:UsuariosService){
+                this.usuarios = usuarioservice.usuario;
+              }
 
   /*Funcion para mirar si el usuario existe y al mismo tiempo acceder en caso de que exista*/     
   changepage(event: Event){
     event.preventDefault();
+    console.log(this.usuarios)
+    console.log(this.email)
+    console.log(this.password)
   
-    this.usuarioservice.usuario.forEach(element => {
+    this.usuarios.forEach(element => {
       if(element.email===this.email&&element.password===this.password){
         this.loginservice.proceed();
         this.usuarioservice.nameOnScreen = element.name;
@@ -37,19 +42,19 @@ export class LoginComponent{
   }
 
   /* funcion para acceder a la creacion del usuario*/
-  notcreatenewuser:boolean= true;
+  createnewuser:boolean= false;
   Newname:string =""
   Newemail:string = ""
   Newpassword:string = ""
   createnew(){
-    this.notcreatenewuser= false;
+    this.createnewuser= true;
 
   }
   addnewuser(){
     if(this.Newname!=="" &&this.Newemail!==""){
       if(this.Newpassword!=="" ){
-        this.usuarioservice.usuario.push(new persona(this.Newname, this.Newemail,this.Newpassword))
-        this.notcreatenewuser = true;
+        this.usuarios.push(new persona(this.Newname, this.Newemail,this.Newpassword))
+        this.createnewuser = false;
       }
 
     }

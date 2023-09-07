@@ -1,32 +1,51 @@
 <div class="container-fluid">
     <div class="row">
+        <div class="col-xl-12 contenedorimagen">
+            <h2>Distribución de espacios</h2>
+            <div class="col-xl-12 contenedorimagen">
+                <img  [src]="imagenURL" alt="Imagen" class="contenedorimagen__Image-distribution">
+            </div>
+            
+        </div>
         <div class="col-xl-12 row" >
-            <div class="col-xl-12" style="border: 2px solid yellow;">
-                <h2>Lunes</h2>
-                <div class="col-xl-12 reservasx2">
+            <div class="col-xl-12 " >
+                <h2 (click)="mostrarEspacio('Lunes')" class="botonesSemana">Lunes</h2>
+                <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioLunes">
                     <div class="contenedoreinternosreservado" *ngIf="reservado.reservadoLunes1espacio;else sinreservar">
-                        <h2>Equipo 1</h2>
+                        <h2>Percepción</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Reservado por {{usuariosservice.nameOnScreen}} para un evento importante</p>
                         <button class="btn btn-primary" (click)="promocionar('Equipo 1', 'Lunes')" >Promocionar</button>
                     </div>
                     <ng-template #sinreservar>
                         <div class="contenedoreinternos">
-                            <h2>Equipo 1</h2>
+                            <h2>Percepción</h2>
                             <p>Capacidad: 3 personas</p>
                             <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                            <button class="btn btn-primary" (click)="primerEspacioLunes()">Reservar</button>
+                            <form *ngIf="reservado.IniciarReservaLunes1espacio">
+                                <label class="contenedoreinternos__labelForm">Nombre de la persona o empresa que reserva:</label><br>
+                                <input type="text" ><br>
+                                
+                                <label class="contenedoreinternos__labelForm">Descripción del evento:</label><br>
+                                <input type="text" ><br>
+
+                                <label class="contenedoreinternos__labelForm">Numero de participantes:</label><br>
+                                <input type='number'><br>
+
+                            </form><br>
+                            <button class="btn btn-primary" (click)="iniciarReserva()" *ngIf="!reservado.IniciarReservaLunes1espacio">Iniciar reserva</button>
+                            <button class="btn btn-primary" (click)="primerEspacioLunes()" *ngIf="reservado.IniciarReservaLunes1espacio">Reservar</button>
                         </div>
                     </ng-template>
                     
                     <div class="contenedoreinternos">
-                        <h2>Equipo 2</h2>
+                        <h2>Creación</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                 </div>
-                <div class="col-xl-12 reservasx1">
+                <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioLunes">
                     <div class="contenedoreinternos">
                         <h2>Equipo 3</h2>
                         <p>Capacidad: 3 personas</p>
@@ -40,23 +59,23 @@
                 
         </div>
         <div class="col-xl-12 row" >
-            <div class="col-xl-12" style="border: 2px solid yellow;">
-                <h2>Martes</h2>
-                <div class="col-xl-12 reservasx2">
+            <div class="col-xl-12" >
+                <h2 (click)="mostrarEspacio('Martes')" class="botonesSemana">Martes</h2>
+                <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioMartes" >
                     <div class="contenedoreinternos">
-                        <h2>Equipo 1</h2>
+                        <h2>Percepción</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                     <div class="contenedoreinternos">
-                        <h2>Equipo 3</h2>
+                        <h2>Creación</h2>
                         <p>Capacidad: 2 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                 </div>
-                <div class="col-xl-12 reservasx1">
+                <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMartes" >
                     <div class="contenedoreinternos">
                         <h2>Equipo 3</h2>
                         <p>Capacidad: 3 personas</p>
@@ -67,23 +86,23 @@
             </div>
         </div>
         <div class="col-xl-12 row">
-            <div class="col-xl-12" style="border: 2px solid yellow;">
-                <h2>Miercoles</h2>
-                <div class="col-xl-12 reservasx2">
+            <div class="col-xl-12" >
+                <h2 (click)="mostrarEspacio('Miercoles')" class="botonesSemana">Miercoles</h2>
+                <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioMiercoles">
                     <div class="contenedoreinternos">
-                        <h2>Equipo 1</h2>
+                        <h2>Percepción</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                     <div class="contenedoreinternos">
-                        <h2>Equipo 2</h2>
+                        <h2>Creación</h2>
                         <p>Capacidad: 2 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                 </div>
-                <div class="col-xl-12 reservasx1">
+                <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMiercoles">
                     <div class="contenedoreinternos">
                         <h2>Equipo 3</h2>
                         <p>Capacidad: 3 personas</p>
@@ -95,23 +114,23 @@
              
         </div>
         <div class="col-xl-12 row">
-            <div class="col-xl-12" style="border: 2px solid yellow;">
-                <h2>Jueves</h2>
-                <div class="col-xl-12 reservasx2">
+            <div class="col-xl-12" >
+                <h2 (click)="mostrarEspacio('Jueves')" class="botonesSemana">Jueves</h2>
+                <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioJueves">
                     <div class="contenedoreinternos">
-                        <h2>Equipo 1</h2>
+                        <h2>Percepción</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                     <div class="contenedoreinternos">
-                        <h2>Equipo 2</h2>
+                        <h2>Creación</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                 </div>
-                <div class="col-xl-12 reservasx1">
+                <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioJueves">
                     <div class="contenedoreinternos">
                         <h2>Equipo 3</h2>
                         <p>Capacidad: 3 personas</p>
@@ -122,23 +141,23 @@
             </div> 
         </div>
         <div class="col-xl-12 row" >
-            <div class="col-xl-12" style="border: 2px solid yellow;">
-                <h2>Viernes</h2>
-                <div class="col-xl-12 reservasx2">
+            <div class="col-xl-12" >
+                <h2 (click)="mostrarEspacio('Viernes')" class="botonesSemana">Viernes</h2>
+                <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioViernes">
                     <div class="contenedoreinternos">
-                        <h2>Equipo 1</h2>
+                        <h2>Percepción</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                     <div class="contenedoreinternos">
-                        <h2>Equipo 2</h2>
+                        <h2>Creación</h2>
                         <p>Capacidad: 3 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                         <button class="btn btn-primary">Reservar</button>
                     </div>
                 </div>
-                <div class="col-xl-12 reservasx1">
+                <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioViernes">
                     <div class="contenedoreinternos">
                         <h2>Equipo 3</h2>
                         <p>Capacidad: 3 personas</p>

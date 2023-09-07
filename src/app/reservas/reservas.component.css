@@ -6,6 +6,9 @@
     flex-wrap: wrap;
 }
 
+h2:hover{
+    background-color: aliceblue;
+}
 .reservasx1{
     border-top: 2px solid #000814;
     border-bottom: 2px solid #000814;
@@ -18,6 +21,30 @@
     background-color:darkslateblue;
 }
 
+.contenedoreinternos__labelForm{
+    color: antiquewhite;
+}
 .contenedoreinternosreservado{
     background-color:red;
 }
+.contenedorimagen{
+    max-height: fit-content;
+}
+.contenedorimagen__Image-distribution{
+    /*max-height: 70rem;
+    max-width: 100%;*/
+    width: 70%;
+    height: 40%;
+    padding-bottom: 2rem;
+    border-radius: 4rem;
+
+}
+
+.botonesSemana{
+    padding: 0;
+    background-color: bisque;
+    color: #000814;
+    border-radius: 2rem;
+    max-width: 100%;
+}
+

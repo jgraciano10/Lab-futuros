@@ -1,6 +1,6 @@
 <div class="contenedor" >
     <div class="contenedor__login">
-        <form *ngIf="notcreatenewuser; else newuser">
+        <form *ngIf="!createnewuser; else newuser">
           <h2 style="color: black;">Labortorio de Futuros-Nodo</h2>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
