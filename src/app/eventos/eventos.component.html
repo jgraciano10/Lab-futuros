@@ -1,9 +1,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="contenedoreinternosreservado col-xl-10" *ngFor="let reservado of promocionar.reservado">
-            <h2>{{reservado.space}}</h2>
+            <h2>Espacio {{reservado.space}}</h2>
             <p>Reservado el dia {{reservado.day}}</p>
-            <p>Reservado por {{usuario.nameOnScreen}} para un evento importante</p>
+            <p>Reservado por {{reservado.nameUnder}}</p>
+            <p>Descripción del evento: {{reservado.description}}</p>
+            <p>Numero de participantes: {{reservado.numberOfParticipants}}</p>
         </div>
     </div>
 </div>        

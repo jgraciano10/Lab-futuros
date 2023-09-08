@@ -6,9 +6,6 @@
     flex-wrap: wrap;
 }
 
-h2:hover{
-    background-color: aliceblue;
-}
 .reservasx1{
     border-top: 2px solid #000814;
     border-bottom: 2px solid #000814;
@@ -46,5 +43,9 @@ h2:hover{
     color: #000814;
     border-radius: 2rem;
     max-width: 100%;
+}
+
+.botonesSemana:hover{
+    background-color:cornsilk;
 }
 

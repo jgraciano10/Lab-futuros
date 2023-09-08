@@ -79,7 +79,7 @@ export class ReservasComponent {
   iniciarReserva(){
     this.reservado.IniciarReservaLunes1espacio = true;
   }
-  /*Funciones para finalizar reservar el dia lunes*/ 
+  /*Funciones para finalizar reservar el dia lunes usando el servicio de reservas*/ 
   primerEspacioLunes(){
     this.reservado.reservadoLunes1espacio = true;
 
@@ -91,7 +91,7 @@ export class ReservasComponent {
   promocionar(equipo:string, dia:string){
     this.usuariosservice.usuario.forEach(elemento =>{
       if(this.usuariosservice.nameOnScreen===elemento.name){
-        this.PromocionarEspacio.reservado.push(new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, equipo))
+        this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, equipo, this.reservado.nameUnderSpace, this.reservado.numberParticipants, this.reservado.descriptionUnderSpace))
         
         console.log(elemento)
         console.log(this.PromocionarEspacio.reservado)

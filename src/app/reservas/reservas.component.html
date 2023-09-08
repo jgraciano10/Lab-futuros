@@ -8,14 +8,16 @@
             
         </div>
         <div class="col-xl-12 row" >
+            <h2>Reservar</h2>
             <div class="col-xl-12 " >
                 <h2 (click)="mostrarEspacio('Lunes')" class="botonesSemana">Lunes</h2>
                 <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioLunes">
                     <div class="contenedoreinternosreservado" *ngIf="reservado.reservadoLunes1espacio;else sinreservar">
                         <h2>Percepción</h2>
-                        <p>Capacidad: 3 personas</p>
-                        <p>Reservado por {{usuariosservice.nameOnScreen}} para un evento importante</p>
-                        <button class="btn btn-primary" (click)="promocionar('Equipo 1', 'Lunes')" >Promocionar</button>
+                        <p>Reservado por: {{reservado.nameUnderSpace}}</p>
+                        <p>El numero de personas permitidas para el evento es de: {{reservado.numberParticipants}} participantes</p>
+                        <p>Descripción del evento: {{reservado.descriptionUnderSpace}}</p>
+                        <button class="btn btn-primary" (click)="promocionar('Percepción', 'Lunes')" >Promocionar</button>
                     </div>
                     <ng-template #sinreservar>
                         <div class="contenedoreinternos">
@@ -23,14 +25,14 @@
                             <p>Capacidad: 3 personas</p>
                             <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
                             <form *ngIf="reservado.IniciarReservaLunes1espacio">
-                                <label class="contenedoreinternos__labelForm">Nombre de la persona o empresa que reserva:</label><br>
-                                <input type="text" ><br>
+                                <label for="nameUnderSpace" class="contenedoreinternos__labelForm">Nombre de la persona o empresa que reserva:</label><br>
+                                <input type="text"  id="nameUnderSpace" [(ngModel)]="reservado.nameUnderSpace" name="NameUnderSpace"><br>
                                 
-                                <label class="contenedoreinternos__labelForm">Descripción del evento:</label><br>
-                                <input type="text" ><br>
+                                <label for="description" class="contenedoreinternos__labelForm">Descripción del evento:</label><br>
+                                <input type="text" [(ngModel)]="reservado.descriptionUnderSpace" name="description" id="description" ><br>
 
                                 <label class="contenedoreinternos__labelForm">Numero de participantes:</label><br>
-                                <input type='number'><br>
+                                <input type='number' [(ngModel)]="reservado.numberParticipants" name="rumberPaticipants"><br>
 
                             </form><br>
                             <button class="btn btn-primary" (click)="iniciarReserva()" *ngIf="!reservado.IniciarReservaLunes1espacio">Iniciar reserva</button>
