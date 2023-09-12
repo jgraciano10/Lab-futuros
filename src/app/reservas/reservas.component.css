@@ -36,16 +36,34 @@
     border-radius: 4rem;
 
 }
+.divbotonessemana {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-.botonesSemana{
+.divbotonessemana__botonesSemana{
     padding: 0;
     background-color: bisque;
     color: #000814;
     border-radius: 2rem;
     max-width: 100%;
+    
 }
 
-.botonesSemana:hover{
-    background-color:cornsilk;
+.divbotonessemana__botonesSemana:hover{
+    background-color:#000814;
+    color: chartreuse;
+    cursor: pointer;
+}
+.divbotonessemana__botonesSemana:active{
+    background-color:#000814;
+    color: chartreuse;
 }
 
+.active{
+    background-color:#000814;
+    color: chartreuse;
+    cursor: pointer;
+    border-radius: 2rem;
+}

@@ -3,18 +3,18 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ReservasService {
-  IniciarReservaLunes1espacio:boolean=false;
-  finalizarReservaLunes1espacio:boolean=false;
+export class ReservasMartesService {
+  IniciarReservaMartes1espacio:boolean=false;
+  finalizarReservaMartes1espacio:boolean=false;
   
-  IniciarReservaLunes2espacio:boolean=false;
-  finalizarReservaLunes2espacio:boolean=false;
+  IniciarReservaMartes2espacio:boolean=false;
+  finalizarReservaMartes2espacio:boolean=false;
 
-  IniciarReservaLunes3espacio:boolean=false;
-  finalizarReservaLunes3espacio:boolean=false;
+  IniciarReservaMartes3espacio:boolean=false;
+  finalizarReservaMartes3espacio:boolean=false;
 
-  IniciarReservaLunesFullSpace:boolean=false;
-  finalizarReservaLunesFullSpace:boolean=false;
+  IniciarReservaMartesFullSpace:boolean=false;
+  finalizarReservaMartesFullSpace:boolean=false;
 
   nameUnderSpacePercepcion:string="";
   descriptionUnderSpacePercepcion:string="";
@@ -32,10 +32,11 @@ export class ReservasService {
   descriptionUnderSpaceFull:string="";
   numberParticipantsFull:string="";
 
-  reservadoLunes1espacio:boolean=false;
-  reservadoLunes2espacio:boolean=false;
-  reservadoLunes3espacio:boolean=false;
-  reservadoLunesFullSpace:boolean=false;
+  reservadoMartes1espacio:boolean=false;
+  reservadoMartes2espacio:boolean=false;
+  reservadoMartes3espacio:boolean=false;
+  reservadoMartesFullSpace:boolean=false;
+
 
   
   constructor() { }
