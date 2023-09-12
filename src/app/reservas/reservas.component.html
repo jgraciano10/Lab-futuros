@@ -1,10 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xl-12 contenedorimagen">
+        <div class="col-xl-12 container-fluid">
             <h2>Distribución de espacios</h2>
-            <div class="col-xl-12 contenedorimagen">
-                <img  [src]="imagenURL" alt="Imagen" class="contenedorimagen__Image-distribution">
+            <div class="col-xl-12 contenedorimagen__interactiva">
+                <div class="reservasx2">
+                    <!--<img  [src]="imagenURL" alt="Imagen" class="contenedorimagen__Image-distribution">-->
+                    <div class="col-xl-5 percepcion" (click)="caracteristicasEspacios('Percepción')"></div>
+                    <div class="col-xl-5 creacion" (click)="caracteristicasEspacios('Creación')"></div>
+                </div>
+                <div class="reservasx1 ">
+                    <div class="col-xl-12 conexion" (click)="caracteristicasEspacios('Conexión')"></div>
+                </div>
             </div>
+            
             
         </div>
         <div class="container-fluid  col-xl-12 row" >
@@ -111,9 +119,9 @@
                         <input type='number' [(ngModel)]="reservado.numberParticipantsFull" name="rumberPaticipants"><br>
                     </form><br>
                 
-                    <p *ngIf="reservado.reservadoLunesFullSpace">Reservado por: {{reservado.nameUnderSpaceConexion}}</p>
-                    <p *ngIf="reservado.reservadoLunesFullSpace">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsConexion}} participantes</p>
-                    <p *ngIf="reservado.reservadoLunesFullSpace">Descripción del evento: {{reservado.descriptionUnderSpaceConexion}}</p>
+                    <p *ngIf="reservado.reservadoLunesFullSpace">Reservado por: {{reservado.nameUnderSpaceFull}}</p>
+                    <p *ngIf="reservado.reservadoLunesFullSpace">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsFull}} participantes</p>
+                    <p *ngIf="reservado.reservadoLunesFullSpace">Descripción del evento: {{reservado.descriptionUnderSpaceFull}}</p>
                 
                     <button class="btn btn-primary" (click)="iniciarReserva('Lunes', 'Full')" *ngIf="!reservado.finalizarReservaLunesFullSpace">Iniciar reserva</button>
                     <button class="btn btn-primary" (click)="EspacioLunes('Full')" *ngIf="reservado.IniciarReservaLunesFullSpace">Reservar</button>

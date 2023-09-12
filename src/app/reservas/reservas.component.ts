@@ -26,6 +26,19 @@ export class ReservasComponent {
                 
              }
 
+ caracteristicasEspacios(espacio:string){
+  switch(espacio){
+    case 'Percepción':
+      alert('Percepción')
+      break;
+    case 'Creación':
+      alert('Creación')
+      break; 
+    case 'Conexión':
+      alert('Conexión')
+      break;   
+  }
+ }             
 
  mostrarEspacio(dia:string){
   if(dia==="Lunes"){

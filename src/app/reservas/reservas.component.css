@@ -24,9 +24,52 @@
 .contenedoreinternosreservado{
     background-color:red;
 }
-.contenedorimagen{
-    max-height: fit-content;
+
+.contenedorimagen__interactiva{
+    background-image: url('src/assets/images/espacio1.png');
+     /* Opciones de ajuste del tamaño de la imagen de fondo */
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5rem;
+    
+    
+   
 }
+.percepcion{
+    min-height: 22rem;
+}
+.creacion{
+    min-height: 22rem;
+}
+.conexion{
+    min-height: 22rem;
+}
+.percepcion:hover{
+    cursor: pointer;
+}
+.creacion:hover{
+    cursor: pointer;
+}
+.conexion{
+    cursor: pointer;
+}
+
+
+
+@media (max-width:600px) {
+    .percepcion{
+        min-height: 5rem;
+    }
+    .creacion{
+        min-height: 5rem;
+    }
+    .conexion{
+        min-height: 5rem;
+    }
+    
+}
+
 .contenedorimagen__Image-distribution{
     /*max-height: 70rem;
     max-width: 100%;*/
