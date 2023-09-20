@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .reservasx1{
@@ -12,17 +13,23 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .contenedoreinternos{
     background-color:darkslateblue;
+    border-radius: 0.5rem;
+    gap: 1rem;
 }
 
 .contenedoreinternos__labelForm{
     color: antiquewhite;
 }
 .contenedoreinternosreservado{
-    background-color:red;
+    background-color:#bc4749;
+    border-radius: 0.5rem;
+    
+
 }
 
 .contenedorimagen__interactiva{
@@ -96,17 +103,28 @@
 
 .divbotonessemana__botonesSemana:hover{
     background-color:#000814;
-    color: chartreuse;
+    color: beige;
     cursor: pointer;
 }
 .divbotonessemana__botonesSemana:active{
     background-color:#000814;
-    color: chartreuse;
+    color: beige;
 }
 
 .active{
     background-color:#000814;
-    color: chartreuse;
+    color:beige;
     cursor: pointer;
     border-radius: 2rem;
+}
+
+.iniciarR{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem ;
+}
+
+.Reservar{
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem ;
+    
 }

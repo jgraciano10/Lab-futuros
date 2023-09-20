@@ -1,7 +1,12 @@
 <header class="col-xl-12 header">
     <div class="col-xl-12 header__container">
-      <div>
-        <p>Nodo</p>
+      <div class="container__logo">
+        <img  [src]="imagenURL" class="logo__nodo" alt="Imagen" width="8%" >
+        <div>
+          <i class="bi bi-search searchIcon"></i>
+          <input class="inputHeader" type="text" placeholder="Buscar en Nodo">
+        </div>
+        
       </div>
       <div>
         <h2>Hola {{usuarioservice.nameOnScreen}}</h2>

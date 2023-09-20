@@ -10,7 +10,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { FeeedbackComponent } from './feeedback/feeedback.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -65,7 +65,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     NgbModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

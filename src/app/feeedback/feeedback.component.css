@@ -1,0 +1,45 @@
+.elementsC{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    
+}
+.form__radio{
+    margin-right: 2rem;
+    margin-left: 0.5rem;
+}
+.form__label{
+    color:beige
+}
+
+@media (max-width:700px) {
+    .form__radio{
+        margin-right: 0.5rem;
+        margin-left: 0.1rem;
+    }
+    .form__label{
+        color:beige
+    }
+}
+
+.form__elements{
+    display: flex;
+    justify-content: flex-start;
+}
+.elements__emailLabel{
+    color: aliceblue;
+    margin-right: 0.5rem;
+}
+.elements__input{
+    border-radius: 0.5rem;
+
+}
+.form__alamcenamientoboton{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.form__button{
+    margin-left: 3.5rem;
+}
+

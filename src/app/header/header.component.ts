@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UsuariosService } from '../usuarios.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,9 @@ import { UsuariosService } from '../usuarios.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor( public usuarioservice:UsuariosService){}
+  imagenURL: SafeResourceUrl;
+  constructor( public usuarioservice:UsuariosService,
+               private sanitizer: DomSanitizer){
+                this.imagenURL = this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/nodoLogo2.png');
+               }
 }

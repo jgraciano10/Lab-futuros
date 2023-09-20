@@ -45,10 +45,10 @@
                 <p *ngIf="this.reservado.reservadoLunes1espacio;">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsPercepcion}} participantes</p>
                 <p *ngIf="this.reservado.reservadoLunes1espacio;">Descripción del evento: {{reservado.descriptionUnderSpacePercepcion}}</p>
             
-                <button class="btn btn-primary" (click)="iniciarReserva('Lunes', 'Percepción')" *ngIf="!this.reservado.finalizarReservaLunes1espacio">Iniciar reserva</button>
-                <button class="btn btn-primary" (click)="EspacioLunes('Percepción')" *ngIf="this.reservado.IniciarReservaLunes1espacio ">Reservar</button>
-                <button class="btn btn-primary"  *ngIf="this.reservado.finalizarReservaLunes1espacio">Cancelar</button>
-                <button class="btn btn-primary" (click)="promocionar('Percepción', 'Lunes')" *ngIf="this.reservado.reservadoLunes1espacio;">Promocionar</button>
+                <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Percepción')" *ngIf="!this.reservado.finalizarReservaLunes1espacio">Iniciar reserva</button>
+                <button class="btn btn-primary Reservar" (click)="EspacioLunes('Percepción')" *ngIf="this.reservado.IniciarReservaLunes1espacio ">Reservar</button>
+                <button class="btn btn-primary iniciarR"  *ngIf="this.reservado.finalizarReservaLunes1espacio">Cancelar</button>
+                <button class="btn btn-primary iniciarR" (click)="promocionar('Percepción', 'Lunes')" *ngIf="this.reservado.reservadoLunes1espacio;">Promocionar</button>
             </div>
             
             <div [ngClass]="{'contenedoreinternos':!reservado.reservadoLunes2espacio, 'contenedoreinternosreservado':reservado.reservadoLunes2espacio}"  class="col-xl-4" >
@@ -70,10 +70,10 @@
                 <p *ngIf="reservado.reservadoLunes2espacio">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsCreacion}} participantes</p>
                 <p *ngIf="reservado.reservadoLunes2espacio">Descripción del evento: {{reservado.descriptionUnderSpaceCreacion}}</p>
             
-                <button class="btn btn-primary" (click)="iniciarReserva('Lunes', 'Creación')" *ngIf="!reservado.finalizarReservaLunes2espacio">Iniciar reserva</button>
-                <button class="btn btn-primary" (click)="EspacioLunes('Creación')" *ngIf="reservado.IniciarReservaLunes2espacio">Reservar</button>
-                <button class="btn btn-primary"  *ngIf="reservado.finalizarReservaLunes2espacio">Cancelar</button>
-                <button class="btn btn-primary" (click)="promocionar('Creación', 'Lunes')" *ngIf="reservado.reservadoLunes2espacio">Promocionar</button>
+                <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Creación')" *ngIf="!reservado.finalizarReservaLunes2espacio">Iniciar reserva</button>
+                <button class="btn btn-primary Reservar" (click)="EspacioLunes('Creación')" *ngIf="reservado.IniciarReservaLunes2espacio">Reservar</button>
+                <button class="btn btn-primary iniciarR"  *ngIf="reservado.finalizarReservaLunes2espacio">Cancelar</button>
+                <button class="btn btn-primary iniciarR" (click)="promocionar('Creación', 'Lunes')" *ngIf="reservado.reservadoLunes2espacio">Promocionar</button>
             </div>
             
             <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioLunes">
@@ -96,10 +96,10 @@
                     <p *ngIf="reservado.reservadoLunes3espacio">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsConexion}} participantes</p>
                     <p *ngIf="reservado.reservadoLunes3espacio">Descripción del evento: {{reservado.descriptionUnderSpaceConexion}}</p>
                 
-                    <button class="btn btn-primary" (click)="iniciarReserva('Lunes', 'Conexión')" *ngIf="!reservado.finalizarReservaLunes3espacio">Iniciar reserva</button>
-                    <button class="btn btn-primary" (click)="EspacioLunes('Conexión')" *ngIf="reservado.IniciarReservaLunes3espacio">Reservar</button>
-                    <button class="btn btn-primary"  *ngIf="reservado.finalizarReservaLunes3espacio">Cancelar</button>
-                    <button class="btn btn-primary" (click)="promocionar('Conexión', 'Lunes')" *ngIf="reservado.reservadoLunes3espacio">Promocionar</button>
+                    <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Conexión')" *ngIf="!reservado.finalizarReservaLunes3espacio">Iniciar reserva</button>
+                    <button class="btn btn-primary Reservar" (click)="EspacioLunes('Conexión')" *ngIf="reservado.IniciarReservaLunes3espacio">Reservar</button>
+                    <button class="btn btn-primary iniciarR"  *ngIf="reservado.finalizarReservaLunes3espacio">Cancelar</button>
+                    <button class="btn btn-primary iniciarR" (click)="promocionar('Conexión', 'Lunes')" *ngIf="reservado.reservadoLunes3espacio">Promocionar</button>
                 </div>
             </div>
 
@@ -123,10 +123,10 @@
                     <p *ngIf="reservado.reservadoLunesFullSpace">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsFull}} participantes</p>
                     <p *ngIf="reservado.reservadoLunesFullSpace">Descripción del evento: {{reservado.descriptionUnderSpaceFull}}</p>
                 
-                    <button class="btn btn-primary" (click)="iniciarReserva('Lunes', 'Full')" *ngIf="!reservado.finalizarReservaLunesFullSpace">Iniciar reserva</button>
-                    <button class="btn btn-primary" (click)="EspacioLunes('Full')" *ngIf="reservado.IniciarReservaLunesFullSpace">Reservar</button>
-                    <button class="btn btn-primary"  *ngIf="reservado.finalizarReservaLunesFullSpace">Cancelar</button>
-                    <button class="btn btn-primary" (click)="promocionar('Lab-Futuros', 'Lunes')" *ngIf="reservado.reservadoLunesFullSpace">Promocionar</button>
+                    <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Full')" *ngIf="!reservado.finalizarReservaLunesFullSpace">Iniciar reserva</button>
+                    <button class="btn btn-primary Reservar" (click)="EspacioLunes('Full')" *ngIf="reservado.IniciarReservaLunesFullSpace">Reservar</button>
+                    <button class="btn btn-primary iniciarR"  *ngIf="reservado.finalizarReservaLunesFullSpace">Cancelar</button>
+                    <button class="btn btn-primary iniciarR" (click)="promocionar('Lab-Futuros', 'Lunes')" *ngIf="reservado.reservadoLunesFullSpace">Promocionar</button>
                 </div>
             </div>
             
@@ -158,10 +158,10 @@
                         <p *ngIf="this.reservado2.reservadoMartes1espacio;">El numero de personas permitidas para el evento es de: {{reservado.numberParticipantsPercepcion}} participantes</p>
                         <p *ngIf="this.reservado2.reservadoMartes1espacio;">Descripción del evento: {{reservado2.descriptionUnderSpacePercepcion}}</p>
                     
-                        <button class="btn btn-primary" (click)="iniciarReserva('Martes', 'Percepción')" *ngIf="!reservado2.finalizarReservaMartes1espacio">Iniciar reserva</button>
-                        <button class="btn btn-primary" (click)="EspacioMartes('Percepción')" *ngIf="reservado2.IniciarReservaMartes1espacio">Reservar</button>
-                        <button class="btn btn-primary"  *ngIf="reservado2.finalizarReservaMartes1espacio">Cancelar</button>
-                        <button class="btn btn-primary" (click)="promocionar('Percepción', 'Martes')" *ngIf="this.reservado2.reservadoMartes1espacio;">Promocionar</button>
+                        <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Percepción')" *ngIf="!reservado2.finalizarReservaMartes1espacio">Iniciar reserva</button>
+                        <button class="btn btn-primary Reservar" (click)="EspacioMartes('Percepción')" *ngIf="reservado2.IniciarReservaMartes1espacio">Reservar</button>
+                        <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartes1espacio">Cancelar</button>
+                        <button class="btn btn-primary iniciarR" (click)="promocionar('Percepción', 'Martes')" *ngIf="this.reservado2.reservadoMartes1espacio;">Promocionar</button>
                     </div>
                     
                     <div [ngClass]="{'contenedoreinternos':!reservado2.reservadoMartes2espacio, 'contenedoreinternosreservado':reservado2.reservadoMartes2espacio}"  class="col-xl-4" >
@@ -183,10 +183,10 @@
                         <p *ngIf="reservado2.reservadoMartes2espacio">El numero de personas permitidas para el evento es de: {{reservado2.numberParticipantsCreacion}} participantes</p>
                         <p *ngIf="reservado2.reservadoMartes2espacio">Descripción del evento: {{reservado2.descriptionUnderSpaceCreacion}}</p>
                     
-                        <button class="btn btn-primary" (click)="iniciarReserva('Martes', 'Creación')" *ngIf="!reservado2.finalizarReservaMartes2espacio">Iniciar reserva</button>
-                        <button class="btn btn-primary" (click)="EspacioMartes('Creación')" *ngIf="reservado2.IniciarReservaMartes2espacio ">Reservar</button>
-                        <button class="btn btn-primary"  *ngIf="reservado2.finalizarReservaMartes2espacio">Cancelar</button>
-                        <button class="btn btn-primary" (click)="promocionar('Creación', 'Martes')" *ngIf="reservado2.reservadoMartes2espacio">Promocionar</button>
+                        <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Creación')" *ngIf="!reservado2.finalizarReservaMartes2espacio">Iniciar reserva</button>
+                        <button class="btn btn-primary Reservar" (click)="EspacioMartes('Creación')" *ngIf="reservado2.IniciarReservaMartes2espacio ">Reservar</button>
+                        <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartes2espacio">Cancelar</button>
+                        <button class="btn btn-primary iniciarR" (click)="promocionar('Creación', 'Martes')" *ngIf="reservado2.reservadoMartes2espacio">Promocionar</button>
                     </div>
                     
                     <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMartes">
@@ -209,10 +209,10 @@
                             <p *ngIf="reservado2.reservadoMartes3espacio">El numero de personas permitidas para el evento es de: {{reservado2.numberParticipantsConexion}} participantes</p>
                             <p *ngIf="reservado2.reservadoMartes3espacio">Descripción del evento: {{reservado2.descriptionUnderSpaceConexion}}</p>
                         
-                            <button class="btn btn-primary" (click)="iniciarReserva('Martes', 'Conexión')" *ngIf="!reservado2.finalizarReservaMartes3espacio">Iniciar reserva</button>
-                            <button class="btn btn-primary" (click)="EspacioMartes('Conexión')" *ngIf="reservado2.IniciarReservaMartes3espacio">Reservar</button>
-                            <button class="btn btn-primary"  *ngIf="reservado2.finalizarReservaMartes3espacio">Cancelar</button>
-                            <button class="btn btn-primary" (click)="promocionar('Conexión', 'Martes')" *ngIf="reservado2.reservadoMartes3espacio">Promocionar</button>
+                            <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Conexión')" *ngIf="!reservado2.finalizarReservaMartes3espacio">Iniciar reserva</button>
+                            <button class="btn btn-primary Reservar" (click)="EspacioMartes('Conexión')" *ngIf="reservado2.IniciarReservaMartes3espacio">Reservar</button>
+                            <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartes3espacio">Cancelar</button>
+                            <button class="btn btn-primary iniciarR" (click)="promocionar('Conexión', 'Martes')" *ngIf="reservado2.reservadoMartes3espacio">Promocionar</button>
                         </div>
                     </div>
                     <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMartes">
@@ -235,10 +235,10 @@
                             <p *ngIf="reservado2.reservadoMartesFullSpace">El numero de personas permitidas para el evento es de: {{reservado2.numberParticipantsFull}} participantes</p>
                             <p *ngIf="reservado2.reservadoMartesFullSpace">Descripción del evento: {{reservado2.descriptionUnderSpaceFull}}</p>
                         
-                            <button class="btn btn-primary" (click)="iniciarReserva('Martes', 'Full')" *ngIf="!reservado2.finalizarReservaMartesFullSpace">Iniciar reserva</button>
-                            <button class="btn btn-primary" (click)="EspacioMartes('Full')" *ngIf="reservado2.IniciarReservaMartesFullSpace">Reservar</button>
-                            <button class="btn btn-primary"  *ngIf="reservado2.finalizarReservaMartesFullSpace">Cancelar</button>
-                            <button class="btn btn-primary" (click)="promocionar('Lab-Futuros', 'Martes')" *ngIf="reservado2.reservadoMartesFullSpace">Promocionar</button>
+                            <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Full')" *ngIf="!reservado2.finalizarReservaMartesFullSpace">Iniciar reserva</button>
+                            <button class="btn btn-primary Reservar" (click)="EspacioMartes('Full')" *ngIf="reservado2.IniciarReservaMartesFullSpace">Reservar</button>
+                            <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartesFullSpace">Cancelar</button>
+                            <button class="btn btn-primary iniciarR" (click)="promocionar('Lab-Futuros', 'Martes')" *ngIf="reservado2.reservadoMartesFullSpace">Promocionar</button>
                         </div>
                     </div>
                 
@@ -250,18 +250,18 @@
 
 
                 <div class="col-xl-12" >
-                    <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioMiercoles">
+                    <div class="reservasx2 col-xl-12" *ngIf="mostrarEspacioMiercoles">
                         <div class="contenedoreinternos" >
                             <h2>Percepción</h2>
                             <p>Capacidad: 10 personas</p>
                             <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                            <button class="btn btn-primary">Iniciar reserva</button>
+                            <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                         </div>
                         <div class="contenedoreinternos">
                             <h2>Creación</h2>
                             <p>Capacidad: 10 personas</p>
                             <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                            <button class="btn btn-primary">Iniciar reserva</button>
+                            <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                         </div>
                     </div>
                     <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMiercoles">
@@ -269,7 +269,7 @@
                             <h2>Conexión</h2>
                             <p>Capacidad: 10 personas</p>
                             <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                            <button class="btn btn-primary">Iniciar reserva</button>
+                            <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                         </div>
                     
                     </div> 
@@ -278,7 +278,7 @@
                             <h2>Todo el espacio</h2>
                             <p>Capacidad: 10 personas</p>
                             <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                            <button class="btn btn-primary">Iniciar reserva</button>
+                            <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                         </div>
                     
                     </div>
@@ -292,13 +292,13 @@
                         <h2>Percepción</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                     <div class="contenedoreinternos">
                         <h2>Creación</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                 </div>
                 <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioJueves">
@@ -306,7 +306,7 @@
                         <h2>Conexión</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                 
                 </div> 
@@ -315,7 +315,7 @@
                         <h2>Todo el espacio</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                 
                 </div>
@@ -330,13 +330,13 @@
                         <h2>Percepción</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                     <div class="contenedoreinternos">
                         <h2>Creación</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                 </div>
                 <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioViernes">
@@ -344,7 +344,7 @@
                         <h2>Conexión</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                 </div>
                 <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioViernes">
@@ -352,7 +352,7 @@
                         <h2>Todo el espacio</h2>
                         <p>Capacidad: 10 personas</p>
                         <p>Horario de Disponibilidad: 10:00 AM - 8:00 PM</p>
-                        <button class="btn btn-primary">Iniciar reserva</button>
+                        <button class="btn btn-primary iniciarR">Iniciar reserva</button>
                     </div>
                 
                 </div>
@@ -360,6 +360,6 @@
         </div>
 
 
-      </div>
+    </div>
 </div>
 

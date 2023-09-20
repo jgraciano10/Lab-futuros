@@ -6,6 +6,10 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+
+.iframe{
+    border-radius: 0.5rem;
+}
 .sections__ul{
 
     margin-left: 0;
