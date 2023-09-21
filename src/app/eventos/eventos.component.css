@@ -1,7 +1,20 @@
 .contenedoreinternosreservado{
     background-color:#bc4749;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
     border-radius: 0.5rem;
+}
+
+.containerdiv{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+
+.elements__select{
+    width: 15rem;
+    border-radius: 1rem;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-us',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent {
+  imagenURL: SafeResourceUrl;
+  constructor(private sanitizer: DomSanitizer){
+    this.imagenURL = this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/espacioMuestra.png');
+  }
+  
 
 }

@@ -7,6 +7,7 @@ import { LoginService } from '../login.service';
 import { persona } from '../persona.model';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ReservasMartesService } from '../reservas-martes.service';
+import { AlertService } from '../alert.service';
 
 @Component({
   selector: 'app-reservas',
@@ -15,12 +16,14 @@ import { ReservasMartesService } from '../reservas-martes.service';
 })
 export class ReservasComponent {
   imagenURL: SafeResourceUrl;
+  mensajeAMostrar:string=""
   constructor(public usuariosservice: UsuariosService,
               public reservado:ReservasService,
               public reservado2: ReservasMartesService,
               public PromocionarEspacio: PromocionarService,
               public login: LoginService,
-              private sanitizer: DomSanitizer){
+              private sanitizer: DomSanitizer,
+              public alert: AlertService){
                 this.imagenURL = this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/espacio1.png');
                 
                 
@@ -29,13 +32,16 @@ export class ReservasComponent {
  caracteristicasEspacios(espacio:string){
   switch(espacio){
     case 'Percepción':
-      alert('Percepción')
+      this.mensajeAMostrar= 'Percepción'
+      this.alert.alertOn = true;
       break;
     case 'Creación':
-      alert('Creación')
+      this.mensajeAMostrar= 'Creación'
+      this.alert.alertOn = true;
       break; 
     case 'Conexión':
-      alert('Conexión')
+      this.mensajeAMostrar= 'Conexión'
+      this.alert.alertOn = true;
       break;   
   }
  }             
@@ -302,8 +308,8 @@ export class ReservasComponent {
             if(this.usuariosservice.nameOnScreen===elemento.name){
               this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado.nameUnderSpacePercepcion, this.reservado.numberParticipantsPercepcion, this.reservado.descriptionUnderSpacePercepcion))
               
-              console.log(elemento)
-              console.log(this.PromocionarEspacio.reservado)
+              this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+              this.alert.alertOn = true;
             }
           })
           break;
@@ -312,8 +318,8 @@ export class ReservasComponent {
             if(this.usuariosservice.nameOnScreen===elemento.name){
               this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado.nameUnderSpaceCreacion, this.reservado.numberParticipantsCreacion, this.reservado.descriptionUnderSpaceCreacion))
               
-              console.log(elemento)
-              console.log(this.PromocionarEspacio.reservado)
+              this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+              this.alert.alertOn = true;
             }
           })
           break;
@@ -322,8 +328,8 @@ export class ReservasComponent {
               if(this.usuariosservice.nameOnScreen===elemento.name){
                 this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado.nameUnderSpaceConexion, this.reservado.numberParticipantsConexion, this.reservado.descriptionUnderSpaceConexion))
                 
-                console.log(elemento)
-                console.log(this.PromocionarEspacio.reservado)
+                this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+                this.alert.alertOn = true;
               }
             })
             break;
@@ -332,8 +338,8 @@ export class ReservasComponent {
               if(this.usuariosservice.nameOnScreen===elemento.name){
                 this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado.nameUnderSpaceFull, this.reservado.numberParticipantsFull, this.reservado.descriptionUnderSpaceFull))
                   
-                console.log(elemento)
-                console.log(this.PromocionarEspacio.reservado)
+                this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+                this.alert.alertOn = true;
               }
             })
             break;  
@@ -345,8 +351,8 @@ export class ReservasComponent {
             if(this.usuariosservice.nameOnScreen===elemento.name){
               this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado2.nameUnderSpacePercepcion, this.reservado2.numberParticipantsPercepcion, this.reservado2.descriptionUnderSpacePercepcion))
               
-              console.log(elemento)
-              console.log(this.PromocionarEspacio.reservado)
+              this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+              this.alert.alertOn = true;
             }
           })
           break;
@@ -354,9 +360,8 @@ export class ReservasComponent {
           this.usuariosservice.usuario.forEach(elemento =>{
             if(this.usuariosservice.nameOnScreen===elemento.name){
               this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado2.nameUnderSpaceCreacion, this.reservado2.numberParticipantsCreacion, this.reservado2.descriptionUnderSpaceCreacion))
-              
-              console.log(elemento)
-              console.log(this.PromocionarEspacio.reservado)
+              this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+              this.alert.alertOn = true;
             }
           })
           break;
@@ -364,9 +369,8 @@ export class ReservasComponent {
             this.usuariosservice.usuario.forEach(elemento =>{
               if(this.usuariosservice.nameOnScreen===elemento.name){
                 this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado2.nameUnderSpaceConexion, this.reservado2.numberParticipantsConexion, this.reservado2.descriptionUnderSpaceConexion))
-                
-                console.log(elemento)
-                console.log(this.PromocionarEspacio.reservado)
+                this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+                this.alert.alertOn = true;
               }
             })
             break;
@@ -376,8 +380,8 @@ export class ReservasComponent {
               if(this.usuariosservice.nameOnScreen===elemento.name){
                 this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado2.nameUnderSpaceFull, this.reservado2.numberParticipantsFull, this.reservado2.descriptionUnderSpaceFull))
                     
-                console.log(elemento)
-                console.log(this.PromocionarEspacio.reservado)
+                this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+                this.alert.alertOn = true;
               }
             })
             break; 

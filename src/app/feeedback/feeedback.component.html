@@ -5,36 +5,23 @@
         </h2>
 
     </div>
-    <div class="elementsC col-xl-6">
-        <form>
-            
-            <label class="form__label">Petición</label>
-            <input class="form__radio" type="radio" name="subject" (click)="activarBoton('Peticion')">
-            
-
-            
-            <label class="form__label">Queja</label>
-            <input class="form__radio" type="radio" name="subject" (click)="activarBoton('Queja')">
-            
-
-            
-            <label class="form__label">Reclamo</label>
-            <input class="form__radio" type="radio" name="subject" (click)="activarBoton('Reclamo')">
-            
-
-            
-            <label class="form__label">Sugerencia</label>
-            <input class="form__radio" type="radio" name="subject" (click)="activarBoton('Sugerencia')">
-            
-        </form>
-    </div>
 
     <div class="email container">
         <form class="email__form  col-xl-12" >
             <div class="col-xl-12 form__elements">
                 <label class="elements__emailLabel">Asunto:</label>
-                <input type="text" class='elements__input' value="{{asuntoEmail}}" [(ngModel)]="asuntoEmail" name="asunto">
+                <select name="subject" id="" [(ngModel)]="asuntoEmail" class="elements__select">
+                    <option value="Petición">Petición</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                </select>
             </div><br>
+               
+            <!--<div class="col-xl-12 form__elements">
+                <label class="elements__emailLabel">Asunto:</label>
+                <input type="text" class='elements__input' value="{{asuntoEmail}}" [(ngModel)]="asuntoEmail" name="asunto">
+            </div><br>-->
 
             <div class="col-xl-12 form__elements">
                 <label class="elements__emailLabel">Cuerpo:</label>
@@ -48,5 +35,5 @@
        
     </div>
     
-</div><br>
+</div>
 

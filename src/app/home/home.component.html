@@ -13,7 +13,9 @@
         <img  [src]="imagenURL" alt="Imagen" width="100%" height="100%">
       </div>
       <div class="col-xl-6">
-        <p>Nodo es uno de los hitos de transformación de EAFIT, que se suma a la reciente presentación de Imaginar Futuros, centro que piensa y crea el futuro de la educación</p>
+        <p>Nodo es uno de los hitos de transformación de EAFIT, que se suma a la reciente presentación de Imaginar Futuros, centro que piensa y crea el futuro de la educación. Somos el centro de formación para la resolución de problemas reales por medio de la tecnología, fundamentado en la conexión entre organizaciones y nuevos líderes.
+
+          Transformamos el talento y lo ponemos al servicio de los retos reales de las organizaciones creando procesos de aprendizaje práctico y exponencial.</p>
         
       </div>
       <div class="col-xl-6">
@@ -27,6 +29,21 @@
     </div>
   </section>
   <div class="col-xl-3" style="overflow: hidden; border: 1px solid yellow;">
-    <app-eventos ></app-eventos>
+    <div class="container-fluid">
+      <div class="row">
+          <div>
+              <h2>
+                  Espacios promocionados
+              </h2>
+          </div>
+          <div class="contenedoreinternosreservado col-xl-12" *ngFor="let reservado of promocionar.reservado">
+              <h2>Espacio {{reservado.space}}</h2>
+              <p>Reservado el dia {{reservado.day}}</p>
+              <p>Reservado por {{reservado.nameUnder}}</p>
+              <p>Descripción del evento: {{reservado.description}}</p>
+              <p>Numero de participantes: {{reservado.numberOfParticipants}}</p>
+          </div><br>
+      </div>
+  </div>        
   </div>
 </div>

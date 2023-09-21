@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { PercepcionAlertComponent } from './percepcion-alert/percepcion-alert.component';
 
 
 
@@ -58,6 +59,7 @@ const routes: Routes = [
     LoginComponent,
     FooterComponent,
     HeaderComponent,
+    PercepcionAlertComponent,
 
   
   ],

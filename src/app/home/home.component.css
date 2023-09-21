@@ -44,3 +44,13 @@
 .li__a:hover{
     color: yellowgreen;
 }    
+
+.contenedoreinternosreservado{
+    background-color:#bc4749;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+}

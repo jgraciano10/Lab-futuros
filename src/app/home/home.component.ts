@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { PromocionarService } from '../promocionar.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,8 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class HomeComponent {
   imagenURL: SafeResourceUrl;
-  constructor(private sanitizer: DomSanitizer) {
+  constructor(private sanitizer: DomSanitizer,
+             public promocionar: PromocionarService ) {
     this.imagenURL = this.sanitizer.bypassSecurityTrustResourceUrl('assets/images/lab.png');
   }
 }

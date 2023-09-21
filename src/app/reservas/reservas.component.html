@@ -1,16 +1,19 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row col-xl-12">
         <div class="col-xl-12 container-fluid">
             <h2>Distribución de espacios</h2>
             <div class="col-xl-12 contenedorimagen__interactiva">
                 <div class="reservasx2">
                     <!--<img  [src]="imagenURL" alt="Imagen" class="contenedorimagen__Image-distribution">-->
-                    <div class="col-xl-5 percepcion" (click)="caracteristicasEspacios('Percepción')"></div>
-                    <div class="col-xl-5 creacion" (click)="caracteristicasEspacios('Creación')"></div>
+                    <div class="col-xl-5 percepcion" (click)="caracteristicasEspacios('Percepción')">
+                    </div>
+                    <div class="col-xl-5 creacion" (click)="caracteristicasEspacios('Creación')">
+                    </div>
                 </div>
                 <div class="reservasx1 ">
                     <div class="col-xl-12 conexion" (click)="caracteristicasEspacios('Conexión')"></div>
                 </div>
+                <app-percepcion-alert [message]="mensajeAMostrar" *ngIf="alert.alertOn"></app-percepcion-alert>
             </div>
             
             
