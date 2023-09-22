@@ -8,8 +8,9 @@
         </div>
         
       </div>
+      
       <div>
-        <h2>Hola {{usuarioservice.nameOnScreen}}</h2>
+        <h2><i class="bi bi-arrow-down-square logoColor" *ngIf="!promocionar.showPromocionado" (click)="showEspaciosP()"></i><i class="bi bi-arrow-up-square logoColor" *ngIf="promocionar.showPromocionado" (click)="showEspaciosP()"></i>Hola {{usuarioservice.nameOnScreen}}</h2>
       </div>
     </div>
     

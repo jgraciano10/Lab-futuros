@@ -6,5 +6,6 @@ import { espacioPromocionado } from './espacioPromocionado.model';
   providedIn: 'root'
 })
 export class PromocionarService {
+  showPromocionado: boolean = false;
   reservado:espacioPromocionado[] = []
 }

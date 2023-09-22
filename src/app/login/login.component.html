@@ -1,43 +1,63 @@
-<div class="contenedor" >
+<div class="container-fluid contenedor" >
+  <div class="col-xl-9">
     <div class="contenedor__login">
-        <form *ngIf="!createnewuser; else newuser">
-          <h2 style="color: black;">Labortorio de Futuros-Nodo</h2>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required>
-            </div>
-            <button  type="submit" (click)="changepage($event)" class="btn btn-primary">Ingresar</button>
-            <br>
-            <br>
-            <button  (click)="createnew()" class="btn btn-primary">Crear usuario</button>
-            <br>
-            <br>
-            <div id="emailHelp" class="form-text div-datos-personales"><a class="div-datos-personales__politica"  href="https://www.eafit.edu.co/datospersonales">Politica de Tratmiento de datos</a></div>
-        </form>    
-        <ng-template #newuser>
-          <form>
-            <h2 style="color: black;">
-              Crear Usuario
-            </h2>
-            <div class="mb-3">
-              <label for="exampleInputName1" class="form-label">Ingerese su nombre</label>
-              <input type="text" class="form-control" id="exampleInputName1" [(ngModel)]="Newname" [ngModelOptions]="{standalone: true}">
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Ingrese su correo electrónico</label>
-              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="Newemail" [ngModelOptions]="{standalone: true}" >
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Ingerese su nueva contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="Newpassword" [ngModelOptions]="{standalone: true}">
-            </div>
-            <button  type="submit" (click)="addnewuser()" class="btn btn-primary">Crear</button>
-          </form>
-        </ng-template>
-    </div>  
+      <app-home></app-home>
+    </div>
+    
+  </div>
+  <div class="col-xl-3">
+    <div class="contenedor__login">
+      <form *ngIf="!createnewuser; else newuser" class="col-xl-4 login-form">
+        <h2 style="color: black;">Labortorio de Futuros-Nodo</h2>
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" required placeholder="Correo Electronico">
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required placeholder="Contraseña">
+          </div>
+          <div>
+            <button  type="submit" (click)="changepage($event)" class="btn btn-primary mb-2  crearButton">Iniciar sesión </button>
+          </div>
+
+          <div>
+            <a class="linkOlvidasteLaP" href="#">
+              ¿Olvidaste la contraseña?
+            </a>
+          </div>
+
+          <div>
+            <hr>
+          </div>
+
+          <div>
+            <button  (click)="createnew()" class="btn btn-primary">Crear nueva cuenta</button>
+          </div>
+          <div id="emailHelp" class="form-text div-datos-personales"><a class="div-datos-personales__politica"  href="https://www.eafit.edu.co/datospersonales">Politica de Tratmiento de datos</a></div>
+      </form>    
+      <ng-template #newuser>
+        <form class="col-xl-4 login-form">
+          <h2 style="color: black;">
+            Crear nuevo usuario
+          </h2>
+          <div class="mb-3">
+            <label for="exampleInputName1" class="form-label">Ingerese su nombre</label>
+            <input type="text" class="form-control" id="exampleInputName1" [(ngModel)]="Newname" [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Ingrese su correo electrónico</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="Newemail" [ngModelOptions]="{standalone: true}" >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Ingerese su nueva contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="Newpassword" [ngModelOptions]="{standalone: true}">
+          </div>
+          <button  type="submit" (click)="addnewuser()" class="btn btn-primary">Crear Usuario</button>
+          <div id="emailHelp" class="form-text div-datos-personales"><a class="div-datos-personales__politica"  href="https://www.eafit.edu.co/datospersonales">Politica de Tratmiento de datos</a></div>
+        </form>
+      </ng-template>
+    </div>
+  </div>
 </div> 
-   
+<app-footer></app-footer>

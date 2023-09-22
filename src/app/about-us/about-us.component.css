@@ -1,3 +1,45 @@
 .containeri__image{
+    border-radius: 0.3rem;
+    background-image: url('src/assets/images/espacio1.png');
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.arriba__image{
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
     border-radius: 1rem;
+    cursor: pointer;
+}
+.image__Center{
+    display: flex;
+    justify-content: center;
+}
+.image__arriba{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedorVideos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.contenedorVideos__h3{
+    color:whitesmoke;
+}
+
+.contenedorVideos__videos{
+    border-radius: 0.3rem;
+}
+
+.imagenZoom{
+    top:10%;
+    right: 25%;
+    width:50rem;
+    height: 30rem;
+    position:fixed;
+    border-radius: 0.5rem;
 }

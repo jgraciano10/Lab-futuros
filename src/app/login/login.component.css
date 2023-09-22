@@ -1,21 +1,28 @@
 .contenedor{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    justify-content: flex-start;
+
+
+    
 }
 
 .contenedor__login{
-    
-    padding: 8rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
     background-color: burlywood;
     margin: auto;
-    display: flex;
-    align-items: center;
     border-radius: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
     
 }
 
+.login-form{
+    width: 100%;
+}
 @media (max-width:800px) {
 
     .contenedor__login{
@@ -29,4 +36,14 @@
 .div-datos-personales__politica{
     color:darkblue;
     text-decoration: none;
+}
+
+.crearButton{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.linkOlvidasteLaP{
+    text-decoration: none;
+
 }

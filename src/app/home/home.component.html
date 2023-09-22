@@ -1,5 +1,5 @@
 <div class="row">
-  <section class="col-xl-9 sectiones" >
+  <section class="sectiones" [ngClass]="{'col-xl-9':promocionar.showPromocionado}">
     <div class="row">
       <div class="col-xl-6">
         <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/i5W9YztOjoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -28,9 +28,9 @@
       </div>
     </div>
   </section>
-  <div class="col-xl-3" style="overflow: hidden; border: 1px solid yellow;">
+  <div class="col-xl-3" style="overflow: hidden; border: 1px solid yellow;" *ngIf="promocionar.showPromocionado">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row" >
           <div>
               <h2>
                   Espacios promocionados
