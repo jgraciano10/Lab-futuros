@@ -10,6 +10,10 @@
 .iframe{
     border-radius: 0.5rem;
 }
+.logo{
+    color: azure;
+    font-size: 2rem;
+}
 .sections__ul{
 
     margin-left: 0;
@@ -53,4 +57,27 @@
     margin-right: 0.5rem;
     margin-right: 0.5rem;
     border-radius: 0.5rem;
+}
+.contenedorEspacio{
+    max-height: 120rem;
+    overflow-y: scroll;
+    scrollbar-width:thin;
+}
+
+.contenedorNodoRight{
+    border-radius: 0.5rem ;
+    background: linear-gradient(to right, #bc4749, #191970);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-right: 0;
+}
+.contenedorNodoLeft{
+    border-radius: 0.5rem ;
+    background: linear-gradient(to left, #bc4749, #191970);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-right: 0;
+}
+.button{
+    margin-bottom: 1rem;
 }

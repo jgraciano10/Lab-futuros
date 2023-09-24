@@ -51,7 +51,7 @@
                 <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Percepción')" *ngIf="!this.reservado.finalizarReservaLunes1espacio">Iniciar reserva</button>
                 <button class="btn btn-primary Reservar" (click)="EspacioLunes('Percepción')" *ngIf="this.reservado.IniciarReservaLunes1espacio ">Reservar</button>
                 <button class="btn btn-primary iniciarR"  *ngIf="this.reservado.finalizarReservaLunes1espacio">Cancelar</button>
-                <button class="btn btn-primary iniciarR" (click)="promocionar('Percepción', 'Lunes')" *ngIf="this.reservado.reservadoLunes1espacio;">Promocionar</button>
+                <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoPercepcionL" (click)="promocionar('Percepción', 'Lunes')" *ngIf="this.reservado.reservadoLunes1espacio;">Promocionar</button>
             </div>
             
             <div [ngClass]="{'contenedoreinternos':!reservado.reservadoLunes2espacio, 'contenedoreinternosreservado':reservado.reservadoLunes2espacio}"  class="col-xl-4" >

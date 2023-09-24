@@ -16,7 +16,8 @@ import { AlertService } from '../alert.service';
 })
 export class ReservasComponent {
   imagenURL: SafeResourceUrl;
-  mensajeAMostrar:string=""
+  mensajeAMostrar:string="";
+  alreadyPromocionado:boolean=true;
   constructor(public usuariosservice: UsuariosService,
               public reservado:ReservasService,
               public reservado2: ReservasMartesService,
@@ -307,7 +308,7 @@ export class ReservasComponent {
           this.usuariosservice.usuario.forEach(elemento =>{
             if(this.usuariosservice.nameOnScreen===elemento.name){
               this.PromocionarEspacio.reservado.push( new espacioPromocionado(elemento.name, elemento.email, elemento.password, dia, espacio, this.reservado.nameUnderSpacePercepcion, this.reservado.numberParticipantsPercepcion, this.reservado.descriptionUnderSpacePercepcion))
-              
+              this.PromocionarEspacio.promocionadoPercepcionL=true;
               this.mensajeAMostrar= `El espacio ${espacio} reservado el dia ${dia} para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
               this.alert.alertOn = true;
             }

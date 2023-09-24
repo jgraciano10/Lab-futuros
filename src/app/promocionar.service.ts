@@ -7,5 +7,6 @@ import { espacioPromocionado } from './espacioPromocionado.model';
 })
 export class PromocionarService {
   showPromocionado: boolean = false;
+  promocionadoPercepcionL:boolean=false;
   reservado:espacioPromocionado[] = []
 }

@@ -5,7 +5,27 @@
 
     
 }
+.contenedor__content{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.divIconShowM{
+    display: flex;
+    justify-content: flex-end;
+}
 
+.divIconShowM__icon{
+    color: aliceblue;
+    font-size: 2rem;
+    cursor: pointer;
+}
 .contenedor__login{
     display: flex;
     justify-content: center;
@@ -14,7 +34,7 @@
     margin: auto;
     border-radius: 3rem;
     margin-bottom: 1rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-right: 1rem;
     margin-left: 1rem;
     

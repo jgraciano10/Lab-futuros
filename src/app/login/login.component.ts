@@ -14,6 +14,8 @@ export class LoginComponent{
   password: string="";
   usuarios:persona[] =[];
   numero:number=0;
+  showLogin:boolean=false;
+
   constructor(public loginservice: LoginService,
               public usuarioservice:UsuariosService){
                 this.usuarios = usuarioservice.usuario;
@@ -39,6 +41,15 @@ export class LoginComponent{
     });
     
     
+  }
+
+  //Function para desplegar o ocultar el login
+  showHideLogin(){
+    if(this.showLogin){
+      this.showLogin=false;
+    }else{
+      this.showLogin=true;
+    }
   }
 
   /* funcion para acceder a la creacion del usuario*/

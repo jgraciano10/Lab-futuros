@@ -1,24 +1,37 @@
 <div class="row">
-  <section class="sectiones" [ngClass]="{'col-xl-9':promocionar.showPromocionado}">
+  <section class="sectiones" [ngClass]="{'col-xl-9':promocionar.showPromocionado, 'col-xl-12':!promocionar.showPromocionado}">
     <div class="row">
       <div class="col-xl-6">
         <iframe class="iframe" width="100%" height="100%" src="https://www.youtube.com/embed/i5W9YztOjoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <div class="col-xl-6">
+      <div class="col-xl-6 contenedorNodoLeft">
         <h1>NODO</h1>
         <h2> El universo de la programación</h2>
-        <p>Generamos estrategias para la exploración y la definición de vocaciones de las personas y acompañamos el diseño de soluciones en tecnología para las organizaciones. Propiciamos el encuentro entre personas y conocimientos relacionados con adaptación tecnológica digital, industria 4.0 y tecnologías emergentes. Potenciamos el talento de las organizaciones.</p>
-      </div>
-      <div class="col-xl-12 contenedorimagen">
-        <img  [src]="imagenURL" alt="Imagen" width="100%" height="100%">
-      </div>
-      <div class="col-xl-6">
-        <p>Nodo es uno de los hitos de transformación de EAFIT, que se suma a la reciente presentación de Imaginar Futuros, centro que piensa y crea el futuro de la educación. Somos el centro de formación para la resolución de problemas reales por medio de la tecnología, fundamentado en la conexión entre organizaciones y nuevos líderes.
+        <p>Generamos estrategias para la exploración y la definición de vocaciones de las personas y acompañamos el diseño de soluciones en tecnología para las organizaciones. Propiciamos el encuentro entre personas y conocimientos relacionados con adaptación tecnológica digital, industria 4.0 y tecnologías emergentes. Potenciamos el talento de las organizaciones.Nodo es uno de los hitos de transformación de EAFIT, que se suma a la reciente presentación de Imaginar Futuros, centro que piensa y crea el futuro de la educación. Somos el centro de formación para la resolución de problemas reales por medio de la tecnología, fundamentado en la conexión entre organizaciones y nuevos líderes.
 
-          Transformamos el talento y lo ponemos al servicio de los retos reales de las organizaciones creando procesos de aprendizaje práctico y exponencial.</p>
-        
+          Transformamos el talento y lo ponemos al servicio de los retos reales de las organizaciones creando procesos de aprendizaje práctico y exponencial. Aprendemos mejor cuando estamos trabajando activamente en proyectos: generando nuevas ideas, diseñando prototipos, haciendo mejoras y creando productos aplicables a las organizaciones.</p>
       </div>
+
+      <div class="col-xl-12 contenedorimagen">
+        <img class="iframe"  [src]="imagenURL" alt="Imagen" width="100%" height="100%">
+      </div>
+
+    
+
       <div class="col-xl-6">
+        <iframe class="iframe"  width="100%" height="400px" src="https://www.youtube.com/embed/01WteCbEzA0?si=sd0J0gGTLwyFS6W8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <div class="col-xl-6">
+        <iframe class="iframe"  width="100%" height="400px" src="https://www.youtube.com/embed/lDAeuwVbrzA?si=L0DbgaqntxEs0mI0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+
+
+      <div class="col-xl-6 contenedorNodoRight">
+        <h2>
+          Información general
+        </h2>
         <ul class="sections__ul">
           <li class="ul__li"><p>Carrera 49 N° 7 Sur-50</p></li>
           <li class="ul__li"><p>Línea nacional: 01 8000 515 900</p></li>
@@ -26,9 +39,21 @@
           <li class="ul__li"><a class="li__a" href="https://www.eafit.edu.co/centrodevisitantes">Atención a visitantes</a></li>
         </ul>
       </div>
+
+      <div class="col-xl-6 contenedorNodoLeft">
+        <h2>
+          Nuestro Laboratorio
+        </h2>
+        <p>
+          Nuestro Laboratorio de Futuros fue el punto de encuentro para que a través de la alianza que construimos junto a el Georgia Institute of Technology, Instituto de Innovación empresarial, nos preguntáramos sobre cómo construir un trabajo basado en la confianza, que fortalezca los lazos entre corporativos y universidades con un enfoque en innovación, emprendimiento y formación de talento.
+
+En el encuentro participaron los representantes del Universidad CES , Universidad EIA - Escuela de Ingeniería de Antioquia, Universidad Pontificia Bolivariana y Universidad EAFIT, construyendo de la mano de aliados como Bancolombia, Celsia, Globant, Sura, Universidad CES, Universidad EAFIT, Universidad EIA, UPB, Alianza Team®, Crystal S.A.S, ILUMA, Microsoft, Proantioquia, SURA Seguros Colombia, TCC y Tecnova, a quienes agracemos por sumarse a esta iniciativa que fortalece el ecosistema emprendedor y educativo de la ciudad.
+        </p>
+      </div>
+      
     </div>
   </section>
-  <div class="col-xl-3" style="overflow: hidden; border: 1px solid yellow;" *ngIf="promocionar.showPromocionado">
+  <div class="col-xl-3 contenedorEspacio" style="border: 0.1rem solid yellow;" *ngIf="promocionar.showPromocionado">
     <div class="container-fluid">
       <div class="row" >
           <div>
@@ -42,6 +67,7 @@
               <p>Reservado por {{reservado.nameUnder}}</p>
               <p>Descripción del evento: {{reservado.description}}</p>
               <p>Numero de participantes: {{reservado.numberOfParticipants}}</p>
+              <button class="btn btn-primary button">Cancelar</button>
           </div><br>
       </div>
   </div>        
