@@ -35,6 +35,7 @@
                 <h2 (click)="mostrarEspacio('Jueves')" [ngClass]="{'divbotonessemana__botonesSemana':!mostrarEspacioJueves, 'active':mostrarEspacioJueves}" class="col-xl-2">Jueves</h2>
                 <h2 (click)="mostrarEspacio('Viernes')" [ngClass]="{'divbotonessemana__botonesSemana':!mostrarEspacioViernes, 'active':mostrarEspacioViernes}" class="col-xl-2">Viernes</h2>
             </div>  
+            
             <div>
                 <label class="label">Seleccione el dia Lunes del mes seleccionado que desa agendar: </label>
                 <select class="select" name="dia"  [(ngModel)]="diaUsado" >

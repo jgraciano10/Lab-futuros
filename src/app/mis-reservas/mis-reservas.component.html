@@ -20,7 +20,8 @@
             <li class="cuadros" *ngFor="let nombre of days" (click)="mostrar(currentMonth, nombre)">{{nombre }}
                 <div *ngFor="let reservados of elementosReservado">
                     <div *ngIf="tieneUnElemento[(nombre)]">
-                        {{reservados.espacio}}
+                        <p class="textReserva">Espacio {{reservados.espacio}} Reservado</p>
+                        
                     </div>
                     
                 </div>
@@ -32,8 +33,8 @@
         <div class="containerdiv">
             <div class="contenedoreinternosreservado col-xl-2" *ngFor="let reservado of showReservado.showReservado">
                 <h2>Espacio {{reservado.espacio}}</h2>
-                <p>Reservado el dia {{reservado.dia}}</p>
-                <p>Reservado el mes de {{reservado.mes}}</p>
+                <p >Reservado el dia {{reservado.dia}} de el mes de {{arrayMonth[reservado.mes]}}</p>
+                
                 <button class="btn btn-primary button">Cancelar</button>
             </div>
         </div>

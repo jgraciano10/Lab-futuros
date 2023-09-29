@@ -70,3 +70,11 @@
 .button{
     margin-bottom: 1rem;
 }
+
+.textReserva{
+    text-decoration: underline;
+}
+
+.textReserva:hover{
+    color: black;
+}
