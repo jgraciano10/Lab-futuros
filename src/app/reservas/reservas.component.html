@@ -18,6 +18,14 @@
             
             
         </div>
+        <div>
+            <label class="label">Seleccione el Mes en el que desea Hacer la reserva:</label>
+            <select class="select" name="month"  [(ngModel)]="mesUsado" (click)="encontrarLunesMes(mesUsado)">
+                <option value="9" (click)="encontrarLunesMes(9)">Octubre</option>
+                <option value="10" (click)="encontrarLunesMes(10)">Noviembre</option>
+                <option value="11" (click)="encontrarLunesMes(11)">Diciembre</option>
+            </select>
+        </div>
         <div class="container-fluid  col-xl-12 row" >
             <h2>Reservar</h2>
             <div class="divbotonessemana " >
@@ -26,7 +34,13 @@
                 <h2 (click)="mostrarEspacio('Miercoles')" [ngClass]="{'divbotonessemana__botonesSemana':!mostrarEspacioMiercoles, 'active':mostrarEspacioMiercoles}" class="col-xl-2">Miercoles</h2>
                 <h2 (click)="mostrarEspacio('Jueves')" [ngClass]="{'divbotonessemana__botonesSemana':!mostrarEspacioJueves, 'active':mostrarEspacioJueves}" class="col-xl-2">Jueves</h2>
                 <h2 (click)="mostrarEspacio('Viernes')" [ngClass]="{'divbotonessemana__botonesSemana':!mostrarEspacioViernes, 'active':mostrarEspacioViernes}" class="col-xl-2">Viernes</h2>
-            </div>    
+            </div>  
+            <div>
+                <label class="label">Seleccione el dia Lunes del mes seleccionado que desa agendar: </label>
+                <select class="select" name="dia"  [(ngModel)]="diaUsado" >
+                    <option *ngFor="let day of lunesDelMes">{{day}}</option>
+                </select>
+            </div>  
         </div>
         <div class="col-xl-12 reservasx2" *ngIf="mostrarEspacioLunes">
             <div [ngClass]="{'contenedoreinternos':!this.reservado.reservadoLunes1espacio, 'contenedoreinternosreservado':this.reservado.reservadoLunes1espacio}" class="col-xl-4" >
@@ -76,7 +90,7 @@
                 <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Creación')" *ngIf="!reservado.finalizarReservaLunes2espacio">Iniciar reserva</button>
                 <button class="btn btn-primary Reservar" (click)="EspacioLunes('Creación')" *ngIf="reservado.IniciarReservaLunes2espacio">Reservar</button>
                 <button class="btn btn-primary iniciarR"  *ngIf="reservado.finalizarReservaLunes2espacio">Cancelar</button>
-                <button class="btn btn-primary iniciarR" (click)="promocionar('Creación', 'Lunes')" *ngIf="reservado.reservadoLunes2espacio">Promocionar</button>
+                <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoCreacionL" (click)="promocionar('Creación', 'Lunes')" *ngIf="reservado.reservadoLunes2espacio">Promocionar</button>
             </div>
             
             <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioLunes">
@@ -102,7 +116,7 @@
                     <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Conexión')" *ngIf="!reservado.finalizarReservaLunes3espacio">Iniciar reserva</button>
                     <button class="btn btn-primary Reservar" (click)="EspacioLunes('Conexión')" *ngIf="reservado.IniciarReservaLunes3espacio">Reservar</button>
                     <button class="btn btn-primary iniciarR"  *ngIf="reservado.finalizarReservaLunes3espacio">Cancelar</button>
-                    <button class="btn btn-primary iniciarR" (click)="promocionar('Conexión', 'Lunes')" *ngIf="reservado.reservadoLunes3espacio">Promocionar</button>
+                    <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoConexionL" (click)="promocionar('Conexión', 'Lunes')" *ngIf="reservado.reservadoLunes3espacio">Promocionar</button>
                 </div>
             </div>
 
@@ -129,7 +143,7 @@
                     <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Lunes', 'Full')" *ngIf="!reservado.finalizarReservaLunesFullSpace">Iniciar reserva</button>
                     <button class="btn btn-primary Reservar" (click)="EspacioLunes('Full')" *ngIf="reservado.IniciarReservaLunesFullSpace">Reservar</button>
                     <button class="btn btn-primary iniciarR"  *ngIf="reservado.finalizarReservaLunesFullSpace">Cancelar</button>
-                    <button class="btn btn-primary iniciarR" (click)="promocionar('Lab-Futuros', 'Lunes')" *ngIf="reservado.reservadoLunesFullSpace">Promocionar</button>
+                    <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoFullSpace" (click)="promocionar('Lab-Futuros', 'Lunes')" *ngIf="reservado.reservadoLunesFullSpace">Promocionar</button>
                 </div>
             </div>
             
@@ -164,7 +178,7 @@
                         <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Percepción')" *ngIf="!reservado2.finalizarReservaMartes1espacio">Iniciar reserva</button>
                         <button class="btn btn-primary Reservar" (click)="EspacioMartes('Percepción')" *ngIf="reservado2.IniciarReservaMartes1espacio">Reservar</button>
                         <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartes1espacio">Cancelar</button>
-                        <button class="btn btn-primary iniciarR" (click)="promocionar('Percepción', 'Martes')" *ngIf="this.reservado2.reservadoMartes1espacio;">Promocionar</button>
+                        <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoPercepcionM" (click)="promocionar('Percepción', 'Martes')" *ngIf="this.reservado2.reservadoMartes1espacio;">Promocionar</button>
                     </div>
                     
                     <div [ngClass]="{'contenedoreinternos':!reservado2.reservadoMartes2espacio, 'contenedoreinternosreservado':reservado2.reservadoMartes2espacio}"  class="col-xl-4" >
@@ -189,7 +203,7 @@
                         <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Creación')" *ngIf="!reservado2.finalizarReservaMartes2espacio">Iniciar reserva</button>
                         <button class="btn btn-primary Reservar" (click)="EspacioMartes('Creación')" *ngIf="reservado2.IniciarReservaMartes2espacio ">Reservar</button>
                         <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartes2espacio">Cancelar</button>
-                        <button class="btn btn-primary iniciarR" (click)="promocionar('Creación', 'Martes')" *ngIf="reservado2.reservadoMartes2espacio">Promocionar</button>
+                        <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoCreacionM" (click)="promocionar('Creación', 'Martes')" *ngIf="reservado2.reservadoMartes2espacio">Promocionar</button>
                     </div>
                     
                     <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMartes">
@@ -215,7 +229,7 @@
                             <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Conexión')" *ngIf="!reservado2.finalizarReservaMartes3espacio">Iniciar reserva</button>
                             <button class="btn btn-primary Reservar" (click)="EspacioMartes('Conexión')" *ngIf="reservado2.IniciarReservaMartes3espacio">Reservar</button>
                             <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartes3espacio">Cancelar</button>
-                            <button class="btn btn-primary iniciarR" (click)="promocionar('Conexión', 'Martes')" *ngIf="reservado2.reservadoMartes3espacio">Promocionar</button>
+                            <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoConexionM" (click)="promocionar('Conexión', 'Martes')" *ngIf="reservado2.reservadoMartes3espacio">Promocionar</button>
                         </div>
                     </div>
                     <div class="col-xl-12 reservasx1" *ngIf="mostrarEspacioMartes">
@@ -241,7 +255,7 @@
                             <button class="btn btn-primary iniciarR" (click)="iniciarReserva('Martes', 'Full')" *ngIf="!reservado2.finalizarReservaMartesFullSpace">Iniciar reserva</button>
                             <button class="btn btn-primary Reservar" (click)="EspacioMartes('Full')" *ngIf="reservado2.IniciarReservaMartesFullSpace">Reservar</button>
                             <button class="btn btn-primary iniciarR"  *ngIf="reservado2.finalizarReservaMartesFullSpace">Cancelar</button>
-                            <button class="btn btn-primary iniciarR" (click)="promocionar('Lab-Futuros', 'Martes')" *ngIf="reservado2.reservadoMartesFullSpace">Promocionar</button>
+                            <button class="btn btn-primary iniciarR" [disabled]="this.PromocionarEspacio.promocionadoFullSpaceM" (click)="promocionar('Lab-Futuros', 'Martes')" *ngIf="reservado2.reservadoMartesFullSpace">Promocionar</button>
                         </div>
                     </div>
                 

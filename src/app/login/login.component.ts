@@ -51,6 +51,8 @@ export class LoginComponent{
       this.showLogin=true;
     }
   }
+  
+  
 
   /* funcion para acceder a la creacion del usuario*/
   createnewuser:boolean= false;
@@ -60,6 +62,10 @@ export class LoginComponent{
   createnew(){
     this.createnewuser= true;
 
+  }
+
+  cancelarAddNew(){
+    this.createnewuser= false;
   }
   addnewuser(){
     if(this.Newname!=="" &&this.Newemail!==""){

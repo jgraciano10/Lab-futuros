@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { PercepcionAlertComponent } from './percepcion-alert/percepcion-alert.component';
+import { MisReservasComponent } from './mis-reservas/mis-reservas.component';
 
 
 
@@ -46,6 +47,9 @@ const routes: Routes = [
   {
     path:"feedback",
     component:FeeedbackComponent
+  }, {
+    path:"mis-reservas",
+    component:MisReservasComponent
   }
 ]
 @NgModule({
@@ -60,6 +64,7 @@ const routes: Routes = [
     FooterComponent,
     HeaderComponent,
     PercepcionAlertComponent,
+    MisReservasComponent,
 
   
   ],

@@ -1,0 +1,72 @@
+.next{
+    cursor: pointer;
+}
+
+.listaDays{
+    list-style-type: none;
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(7 , 1fr);
+    padding-left: 0;
+    background-color: antiquewhite;
+    border-radius: 0.5rem;
+   
+
+}
+
+.title{
+    background-color: antiquewhite;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    
+}
+.cuadros{
+    padding: 3rem;
+    border-radius: 0.2rem; 
+    cursor: pointer;
+    color:aliceblue;
+    background-color: #bc4749;
+    border: 0.1rem solid aliceblue;
+    
+}
+.cuadros:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+
+.cuadrosReservado{
+    padding: 3rem;
+    border-radius: 0.5rem;
+    background-color:indianred;
+}
+
+.espacios{
+    font-size: 2rem;
+}
+
+.contenedoreinternosreservado{
+    background-color:#bc4749;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.containerdiv{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+
+.elements__select{
+    width: 15rem;
+    border-radius: 1rem;
+}
+.button{
+    margin-bottom: 1rem;
+}

@@ -22,5 +22,9 @@ export class HeaderComponent {
     }else{
       this.promocionar.showPromocionado=true;
     }
-  }             
+  }    
+  tooltip_variable:string=""
+  tooltip_name(variable: string){
+    this.tooltip_variable=variable;
+  }         
 }

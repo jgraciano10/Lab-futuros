@@ -27,21 +27,15 @@
     cursor: pointer;
 }
 .contenedor__login{
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    background-color: burlywood;
-    margin: auto;
-    border-radius: 3rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    
+    position: absolute;
+    top: 10%;
+    right: 3%;   
 }
 
 .login-form{
-    width: 100%;
+    padding: 3rem;
+    background-color:burlywood;
+    border-radius: 1.5rem;
 }
 @media (max-width:800px) {
 
@@ -65,5 +59,10 @@
 }
 .linkOlvidasteLaP{
     text-decoration: none;
+
+}
+
+.cancelButton{
+    padding: 0.2rem 0.9rem;
 
 }

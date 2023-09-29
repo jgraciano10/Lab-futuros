@@ -5,19 +5,23 @@
         </h2>
     </div>
 
+    <i class="bi bi-x-circle lupaP" (click)="zoom('p')" *ngIf="zoomImageP"></i>
+    <i class="bi bi-x-circle lupaC" (click)="zoom('cr')" *ngIf="zoomImageCR"></i>
+    <i class="bi bi-x-circle lupaCO" (click)="zoom('co')" *ngIf="zoomImageCO"></i>
+
     <div class="containeri__image container-fluid row">
         <div class="col-xl-12 image__arriba row">
             <div class="col-xl-3">
-                <img  [src]="imagenSuperiorDerecha" alt="Imagen" width="100%" height="100%" [ngClass]="{'imagenZoom':zoomImageP, 'arriba__image':!zoomImageP}" (click)="zoom('p')">
+                <img  [src]="imagenSuperiorDerecha" alt="Imagen" width="100%" height="100%" [ngClass]="{'imagenZoomP':zoomImageP, 'arriba__image':!zoomImageP}" (click)="zoom('p')">
             </div>
             <div class="col-xl-3">
-                <img [src]="imagenSuperiorIzquierda" alt="Imagen" width="100%" height="100%" [ngClass]="{'imagenZoom':zoomImageCR, 'arriba__image':!zoomImageCR}" (click)="zoom('cr')">
+                <img [src]="imagenSuperiorIzquierda" alt="Imagen" width="100%" height="100%" [ngClass]="{'imagenZoomC':zoomImageCR, 'arriba__image':!zoomImageCR}" (click)="zoom('cr')">
             </div>
         </div><br><br>
 
         <div class="col-xl-12 image__Center row" >
             <div class="col-xl-3">
-                <img [src]="imagenCentral" alt="Imagen" width="100%" height="100%" [ngClass]="{'imagenZoom':zoomImageCO, 'arriba__image':!zoomImageCO}" (click)="zoom('co')">
+                <img [src]="imagenCentral" alt="Imagen" width="100%" height="100%" [ngClass]="{'imagenZoomCO':zoomImageCO, 'arriba__image':!zoomImageCO}" (click)="zoom('co')">
             </div>
         </div><br><br>
         

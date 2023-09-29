@@ -59,9 +59,17 @@
     border-radius: 0.5rem;
 }
 .contenedorEspacio{
-    max-height: 120rem;
+    height: 100%;
     overflow-y: scroll;
     scrollbar-width:thin;
+    position: absolute;
+    top: 9%;
+    right: 0%;
+    max-width: 25rem;
+    z-index: 1;
+    background-color: #191970;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #bc4749;
 }
 
 .contenedorNodoRight{
@@ -76,7 +84,11 @@
     background: linear-gradient(to left, #bc4749, #191970);
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
-    padding-right: 0;
+    padding: 1rem 2rem;
+}
+
+.contenedorNodoLeft__text{
+    text-align:justify;
 }
 .button{
     margin-bottom: 1rem;

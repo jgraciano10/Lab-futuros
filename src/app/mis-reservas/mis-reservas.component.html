@@ -1,0 +1,42 @@
+<div>
+    <h2>
+        <i class="bi bi-arrow-left-square next" (click)="selectMonth('-')"></i> {{currentMonth}} <i class="bi bi-arrow-right-square next" (click)="selectMonth('+')"></i>
+    </h2>
+</div>
+ 
+
+<div>
+    <div >
+        <ul class="listaDays">
+            <li class="title">Lunes</li>
+            <li class="title">Martes</li>
+            <li class="title">Miercoles</li>
+            <li class="title">Jueves</li>
+            <li class="title">Viernes</li>
+            <li class="title">Sabado</li>
+            <li class="title">Domingo</li>
+            <li class="cuadros" *ngFor="let element of rellenarEmpty"></li>
+            <li [ngStyle]="{'grid-column-start': firstMonthDay}" class="cuadros" (click)="mostrar(currentMonth, 1)">1</li>
+            <li class="cuadros" *ngFor="let nombre of days" (click)="mostrar(currentMonth, nombre)">{{nombre }}
+                <div *ngFor="let reservados of elementosReservado">
+                    <div *ngIf="tieneUnElemento[(nombre)]">
+                        {{reservados.espacio}}
+                    </div>
+                    
+                </div>
+            </li>
+            <li class="cuadros" *ngFor="let element of rellenarEmptyFinal"></li>
+        </ul>
+    </div>
+    <div *ngIf="mostrarEspacios">
+        <div class="containerdiv">
+            <div class="contenedoreinternosreservado col-xl-2" *ngFor="let reservado of showReservado.showReservado">
+                <h2>Espacio {{reservado.espacio}}</h2>
+                <p>Reservado el dia {{reservado.dia}}</p>
+                <p>Reservado el mes de {{reservado.mes}}</p>
+                <button class="btn btn-primary button">Cancelar</button>
+            </div>
+        </div>
+       
+    </div>
+</div>
