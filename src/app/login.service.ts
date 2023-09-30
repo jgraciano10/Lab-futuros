@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LoginService {
   constructor() { }
-  procesador: Boolean =true;
+  procesador: Boolean =false;
   
   proceed(){
     if(this.procesador){

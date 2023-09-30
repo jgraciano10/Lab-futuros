@@ -262,9 +262,13 @@ export class ReservasComponent {
           console.log(this.mesUsado)
           this.misreservas.almacenamiento.push( new month(this.diaUsado, this.mesUsado, espacio))
           console.log(this.misreservas.almacenamiento)
+          this.mensajeAMostrar= `El espacio ${espacio} reservado el dia Lunes para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+          this.alert.alertOn = true;
           
         }else{
-          alert("El numero de participantes no puede sobrepasar el maximo aforo del espacio")
+          
+          this.mensajeAMostrar= `El numero de participantes no puede sobrepasar el maximo aforo del espacio`;
+          this.alert.alertOn = true;
         }
         break;
     case "Creación":
@@ -274,8 +278,11 @@ export class ReservasComponent {
         this.reservado.reservadoLunes2espacio = true;
         this.misreservas.almacenamiento.push( new month(this.diaUsado, this.mesUsado, espacio))
         console.log(this.misreservas.almacenamiento)
+        this.mensajeAMostrar= `El espacio ${espacio} reservado el dia Lunes para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+        this.alert.alertOn = true;
       }else{
-        alert("El numero de participantes no puede sobrepasar el maximo aforo del espacio")
+        this.mensajeAMostrar= `El numero de participantes no puede sobrepasar el maximo aforo del espacio`;
+        this.alert.alertOn = true;
       }    
       break;
       case "Conexión":
@@ -285,8 +292,11 @@ export class ReservasComponent {
           this.reservado.reservadoLunes3espacio = true;
           this.misreservas.almacenamiento.push( new month(this.diaUsado, this.mesUsado, espacio))
           console.log(this.misreservas.almacenamiento)
-        }else{
-          alert("El numero de participantes no puede sobrepasar el maximo aforo del espacio")
+          this.mensajeAMostrar= `El espacio ${espacio} reservado el dia Lunes para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+          this.alert.alertOn = true;
+      }else{
+          this.mensajeAMostrar= `El numero de participantes no puede sobrepasar el maximo aforo del espacio`;
+          this.alert.alertOn = true;
         }    
         break;  
       case "Full":
@@ -298,7 +308,10 @@ export class ReservasComponent {
           this.misreservas.almacenamiento.push( new month(this.diaUsado, this.mesUsado, espacio))
           console.log(this.misreservas.almacenamiento)
 
-          
+         
+
+          this.mensajeAMostrar= `El espacio ${espacio} reservado el dia Lunes para el evento de ${this.reservado.descriptionUnderSpacePercepcion} a nombre de ${this.reservado.nameUnderSpacePercepcion} ha sido promocionado con exito`
+          this.alert.alertOn = true;
 
           this.reservado.nameUnderSpacePercepcion = this.reservado.nameUnderSpaceFull;
           this.reservado.nameUnderSpaceCreacion = this.reservado.nameUnderSpaceFull;
@@ -323,7 +336,8 @@ export class ReservasComponent {
           this.reservado.reservadoLunes3espacio = true;
 
         }else{
-          alert("El numero de participantes no puede sobrepasar el maximo aforo del espacio")
+          this.mensajeAMostrar= `El numero de participantes no puede sobrepasar el maximo aforo del espacio`;
+          this.alert.alertOn = true;
         }    
         break;   
 
